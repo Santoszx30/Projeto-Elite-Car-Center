@@ -1,0 +1,329 @@
+body {
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #160000,
+        #420000,
+        #160000
+    );
+
+    color: white;
+
+    min-height: 100vh;
+
+    background-repeat: no-repeat;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    text-align: center;
+
+    padding: 20px;
+
+    background: linear-gradient(
+        90deg,
+        #180000,
+        #500000,
+        #180000
+    );
+}
+
+header img {
+    width: 150px;
+}
+
+header h1 {
+    color: #d00000;
+
+    text-transform: uppercase;
+
+    margin: 10px;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+nav {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 20px;
+
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #ff2020;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 40px;
+
+    padding: 50px 20px;
+}
+
+
+/* =========================
+   CADASTRO
+========================= */
+
+.cadastro {
+    width: 600px;
+
+    padding: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #260000,
+        #450000
+    );
+
+    border-radius: 15px;
+
+    border: 1px solid #8b0000;
+}
+
+.cadastro h2 {
+    font-size: 35px;
+
+    margin-bottom: 10px;
+
+    color: white;
+}
+
+.subtitulo {
+    color: #ccc;
+
+    margin-bottom: 25px;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   CAMPOS
+========================= */
+
+.campo {
+    width: 100%;
+
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+
+    margin-top: 15px;
+
+    margin-bottom: 5px;
+
+    font-size: 18px;
+}
+
+input {
+    width: 100%;
+
+    padding: 15px;
+
+    background: #1d0000;
+
+    border: 1px solid #8b0000;
+
+    border-radius: 10px;
+
+    color: white;
+
+    font-size: 18px;
+}
+
+input:focus {
+    outline: none;
+
+    border-color: #d4af37;
+
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+}
+
+
+/* =========================
+   BOTÃO CRIAR CONTA
+========================= */
+
+.botaoCadastrar {
+    width: 60%;
+
+    display: block;
+
+    margin: 30px auto 0;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #a87920,
+        #d4af37
+    );
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.botaoCadastrar:hover {
+    background: linear-gradient(
+        90deg,
+        #d4af37,
+        #e2c45c
+    );
+
+    transform: scale(1.02);
+}
+
+.botaoCadastrar:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #0a0000;
+
+    padding: 30px;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+}
+
+footer h3 {
+    color: #d00000;
+}
+
+footer p {
+    color: #ccc;
+
+    margin-top: 5px;
+}
+
+
+/* =========================
+   ATENDIMENTO
+========================= */
+
+.atendimento {
+    text-align: left;
+}
+
+.atendimento button {
+    margin-top: 10px;
+
+    padding: 10px 15px;
+
+    background: #b00000;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+.atendimento button:hover {
+    background: #d00000;
+}
+
+
+.sac {
+    text-align: center;
+}
+
+.sac .copyright {
+    color: #888;
+}
+
+
+.redes {
+    text-align: center;
+}
+
+.redes a {
+    color: #d00000;
+
+    font-size: 25px;
+
+    margin: 0 5px;
+
+    text-decoration: none;
+}
+
+.redes a:hover {
+    color: #ff2020;
+}
+
+
+@media (max-width: 800px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    .cadastro {
+        width: 100%;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .botaoCadastrar {
+        width: 100%;
+    }
+}
