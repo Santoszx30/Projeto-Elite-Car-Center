@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+.navbar {
+  background-color: #2b0000;
+  color: gold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: gold;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+}
+
+.minha-conta, .resumo-conta {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border: 1px solid gold;
+  border-radius: 8px;
+  width: 40%;
+}
+
+.minha-conta h2, .resumo-conta h2 {
+  color: gold;
+  margin-bottom: 20px;
+}
+
+.minha-conta form label {
+  display: block;
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.minha-conta form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #222;
+  color: #fff;
+}
+
+.btn-gold {
+  background-color: gold;
+  color: #111;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.btn-red {
+  background-color: darkred;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.atendimento {
+  text-align: center;
+  padding: 30px;
+  background-color: #2b0000;
+  margin: 20px;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #000;
+  text-align: center;
+  padding: 20px;
+  color: #ccc;
+}
+
+footer .social a {
+  margin: 0 10px;
+  color: gold;
+  text-decoration: none;
+}
