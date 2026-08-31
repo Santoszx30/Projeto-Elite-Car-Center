@@ -1,74 +1,131 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Centro Automotivo de Elite</title>
+  <title>Minha Conta - Elite Car Center</title>
+
   <link rel="stylesheet" href="TelaPerfil.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
- 
-  <header class="navbar">
-    <div class="logo">Centro Automotivo de Elite</div>
+
+  <header>
+    <img src="Logo elite car center.png" alt="Logo Elite Car Center">
+    <h1>Centro Automotivo de Elite</h1>
+
     <nav>
-      <ul>
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Loja de Elite</a></li>
-        <li><a href="#">Notificações</a></li>
-        <li><a href="#">Meus Veículos</a></li>
-        <li><a href="#">Minha conta</a></li>
-        <li><a href="#">Agendamento</a></li>
-      </ul>
+      <a href="#"><i class="fas fa-home"></i> Início</a>
+      <a href="#"><i class="fas fa-store"></i> Loja de Elite</a>
+      <a href="#"><i class="fas fa-bell"></i> Notificações</a>
+      <a href="#"><i class="fas fa-car"></i> Meus Veículos</a>
+      <a href="#"><i class="fas fa-user"></i> Minha Conta</a>
+      <a href="#"><i class="fas fa-calendar-alt"></i> Agendamento</a>
     </nav>
   </header>
 
-  <main class="container">
-    
-    <section class="minha-conta">
-      <h2>MINHA CONTA</h2>
-      <form>
-        <label>Nome</label>
-        <input type="text" placeholder="Digite seu nome">
-        
-        <label>E-mail</label>
-        <input type="email" placeholder="Digite seu e-mail">
-        
-        <label>Telefone</label>
-        <input type="tel" placeholder="Digite seu telefone">
-        
-        <label>Novo nome de Usuário</label>
-        <input type="text" placeholder="Digite novo usuário">
-        
-        <label>Nova senha</label>
-        <input type="password" placeholder="Digite nova senha">
-        
-        <button type="submit" class="btn-gold">SALVAR ALTERAÇÕES</button>
-      </form>
+  <main>
+
+    <section class="cadastro">
+
+      <h2><i class="fas fa-user-cog"></i> MINHA CONTA</h2>
+      <p class="subtitulo">Gerencie suas informações e preferências</p>
+
+      <div class="campo">
+        <i class="fas fa-user"></i>
+        <label for="inputNome">Nome</label>
+        <input type="text" id="inputNome" placeholder="Digite seu nome">
+      </div>
+
+      <div class="campo">
+        <i class="fas fa-envelope"></i>
+        <label for="inputEmail">E-mail</label>
+        <input type="email" id="inputEmail" placeholder="Digite seu e-mail">
+      </div>
+
+      <div class="campo">
+        <i class="fas fa-mobile-alt"></i>
+        <label for="inputTelefone">Telefone</label>
+        <input type="tel" id="inputTelefone" placeholder="Digite seu telefone">
+      </div>
+
+      <div class="campo">
+        <i class="fas fa-id-badge"></i>
+        <label for="inputUsuario">Novo nome de Usuário</label>
+        <input type="text" id="inputUsuario" placeholder="Digite novo usuário">
+      </div>
+
+      <div class="campo">
+        <i class="fas fa-key"></i>
+        <label for="inputSenha">Nova senha</label>
+        <input type="password" id="inputSenha" placeholder="Digite nova senha">
+      </div>
+
+      <button id="btnSalvar" class="botaoCadastrar">
+        <i class="fas fa-save"></i> SALVAR ALTERAÇÕES
+      </button>
     </section>
 
-    <section class="resumo-conta">
-      <h2>RESUMO DA CONTA</h2>
-      <p><strong>Nível VIP atual:</strong> BLACK</p>
-      <p><strong>Total de compras:</strong> 3</p>
-      <p><strong>Total gasto:</strong> 36.930.000</p>
-      <p><strong>Membro desde:</strong> 30/12/2025</p>
+    <section class="resumo">
+
+      <h2><i class="fas fa-crown"></i> RESUMO DA CONTA</h2>
+
+      <p>
+        <i class="fas fa-crown"></i>
+        Nível VIP atual:
+        <strong id="statusVip">BLACK</strong>
+      </p>
+
+      <p>
+        <i class="fas fa-shopping-cart"></i>
+        Total de compras:
+        <strong id="totalCompras">3</strong>
+      </p>
+
+      <p>
+        <i class="fas fa-money-bill-wave"></i>
+        Total gasto:
+        <strong id="totalGasto">36.930.000</strong>
+      </p>
+
+      <p>
+        <i class="fas fa-calendar-check"></i>
+        Membro desde:
+        <strong id="membroDesde">30/12/2025</strong>
+      </p>
+
     </section>
+
   </main>
 
-  <section class="atendimento">
-    <h3>Atendimento</h3>
-    <p>08:00 às 20:00 - Segunda a Sexta, horário de Brasília</p>
-    <p>Sac: 0009-8120-9803</p>
-    <button class="btn-red">FALE CONOSCO</button>
-  </section>
-
   <footer>
-    <p>© 2026 Elite Corporation. Todos os direitos reservados</p>
-    <div class="social">
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">TikTok</a>
+
+    <div class="atendimento">
+      <h3><i class="fas fa-headset"></i> Atendimento</h3>
+
+      <p>08:00 às 20:00 - Segunda a Sexta, horário de Brasília</p>
+
+      <p><i class="fas fa-phone"></i> SAC: 0009-8120-9803</p>
+
+      <button id="btnFaleConosco">
+        <i class="fas fa-comments"></i> FALE CONOSCO
+      </button>
     </div>
+
+    <p>© 2026 Elite Corporation. Todos os direitos reservados.</p>
+
+    <div class="redes">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+    </div>
+
   </footer>
+
+  <script src="TelaPerfil.js"></script>
 </body>
+
 </html>

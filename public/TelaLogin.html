@@ -5,65 +5,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Elite Car Center</title>
+    <title>Elite Car Center | Login</title>
 
     <link rel="stylesheet" href="TelaLogin.css">
 </head>
 
 <body>
-<header>
 
- <img src="Logo elite car center.png" alt="Logo Elite Car Center">
+    <header>
+
+        <img src="Logo elite car center.png" alt="Logo Elite Car Center">
 
         <h1>Centro Automotivo de Elite</h1>
+
         <nav>
-      <a href="#">Início</a>
-     <a href="#">Loja de Elite</a>
-<a href="#">Notificações</a>
-    <a href="#">Meus Veículos</a>
-    <a href="#">Minha Conta</a>
-    <a href="#">Agendamento</a>
+            <a href="#">Início</a>
+            <a href="#">Loja de Elite</a>
+            <a href="#">Notificações</a>
+            <a href="#">Meus Veículos</a>
+            <a href="#">Minha Conta</a>
+            <a href="#">Agendamento</a>
         </nav>
 
     </header>
 
     <main>
-  <section class="login">
-   <h2>Faça <span>Login</span></h2>
 
-  <label>Usuário</label>
-  <input type="text" id="usuario">
+        <section class="login">
 
-     <label>Senha</label>
-     <input type="password" id="senha">
+            <h2>
+                Faça <span>Login</span>
+            </h2>
 
-    <div class="links">
-    <a href="#">Esqueci minha senha</a>
- <a href="#">Cadastre-se!</a>
-    </div>
-    <button onclick="entrar()">Entrar</button>
+
+            <div class="campo">
+
+                <label for="usuario">
+                    Usuário
+                </label>
+
+                <input type="text" id="usuario" placeholder="" autocomplete="username">
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="senha">
+                    Senha
+                </label>
+
+                <input type="password" id="senha" placeholder="" autocomplete="current-password">
+
+            </div>
+
+            <div class="links">
+
+                <a href="#">
+                    Esqueci minha senha
+                </a>
+
+                <a href="Cadastro.html">
+                    Cadastre-se!
+                </a>
+
+            </div>
+
+            <button class="botao-entrar" type="button" onclick="entrar()">
+                Entrar
+            </button>
+
         </section>
 
+        <div class="divisor"></div>
 
         <section class="social">
-    <h2>Login por:</h2>
 
-      <button>Google</button>
-       <button>Apple</button>
+            <h2>
+                Login por:
+            </h2>
+
+            <div class="social-botoes">
+
+                <button class="botao-social google" type="button">
+                    Google
+                </button>
+
+
+                <button class="botao-social apple" type="button">
+                    Apple
+                </button>
+
+            </div>
 
         </section>
 
     </main>
 
-
     <footer>
 
-        <div>
-     <h3>Atendimento</h3>
-    <p>08:00 às 20:00 - Segunda a Sexta</p>
-     <p>SAC: 0009-8120-9803</p>
+        <div class="atendimento">
+
+            <h3>
+                Atendimento
+            </h3>
+
+            <p>
+                08:00 às 20:00 - Segunda a Sexta
+            </p>
+
+            <p>
+                SAC: 0009-8120-9803
+            </p>
+
         </div>
-    <p>© 2026 Elite Corporation. Todos os direitos reservados.</p>
+
+
+        <div class="copyright">
+
+            <p>
+                © 2026 Elite Corporation. Todos os direitos reservados.
+            </p>
+
+        </div>
 
     </footer>
 

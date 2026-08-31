@@ -1,0 +1,1902 @@
+/* =====================================================
+   CONFIGURAÇÕES GERAIS
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --black: #050505;
+    --dark: #0d0d0d;
+    --dark-soft: #151515;
+    --gold: #c6a15b;
+    --gold-light: #e8cf96;
+    --champagne: #f1e3c5;
+    --beige: #d8c6a2;
+    --white: #ffffff;
+    --gray: #a8a8a8;
+
+    --gradient-gold: linear-gradient(
+        135deg,
+        #8f6b2e,
+        #e8cf96,
+        #b88a3b
+    );
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+
+    font-family: "Montserrat", sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-light);
+}
+
+
+/* =====================================================
+   UTILITÁRIOS
+===================================================== */
+
+.section {
+    padding: 120px 8%;
+}
+
+.section-tag {
+    color: var(--gold);
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: 0.95;
+    font-weight: 500;
+}
+
+.section h2 span {
+    color: var(--gold);
+}
+
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 70px;
+}
+
+.section-header p:last-child {
+    margin-top: 25px;
+    color: var(--gray);
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    position: fixed;
+
+    top: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 92%;
+    max-width: 1400px;
+
+    padding: 18px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 1000;
+
+    background: rgba(10, 10, 10, 0.65);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+
+/* LOGO */
+
+.logo {
+    text-decoration: none;
+
+    color: var(--white);
+
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+.logo span {
+    color: var(--gold);
+    font-weight: 400;
+}
+
+
+/* MENU */
+
+.navbar {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    color: #cfcfcf;
+
+    text-decoration: none;
+
+    font-size: 0.82rem;
+
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--gold);
+}
+
+
+/* BOTÃO HEADER */
+
+.header-btn {
+    text-decoration: none;
+
+    color: var(--black);
+
+    background: var(--gradient-gold);
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.header-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(198, 161, 91, 0.25);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 140px 8% 80px;
+
+    background:
+        radial-gradient(
+            circle at 70% 50%,
+            rgba(198, 161, 91, 0.08),
+            transparent 35%
+        ),
+        #050505;
+}
+
+
+.hero-container {
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    animation: fadeUp 1s ease forwards;
+}
+
+.hero-tag {
+    color: var(--gold);
+
+    letter-spacing: 4px;
+
+    font-size: 0.75rem;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(4rem, 7vw, 7rem);
+
+    font-weight: 500;
+
+    line-height: 0.9;
+
+    max-width: 800px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+    display: block;
+}
+
+.hero-description {
+    margin-top: 30px;
+
+    color: #b5b5b5;
+
+    max-width: 600px;
+
+    line-height: 1.8;
+
+    font-size: 1rem;
+}
+
+
+/* BOTÕES HERO */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px 28px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    transition: 0.4s;
+}
+
+.btn-primary {
+    background: var(--gradient-gold);
+
+    color: var(--black);
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 40px rgba(198, 161, 91, 0.3);
+}
+
+.btn-secondary {
+    color: var(--white);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    background: rgba(255, 255, 255, 0.03);
+
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+    border-color: var(--gold);
+
+    color: var(--gold);
+
+    transform: translateY(-4px);
+}
+
+
+/* HERO INFO */
+
+.hero-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 55px;
+}
+
+.hero-info div:not(.info-line) {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.hero-info strong {
+    color: var(--gold);
+
+    font-size: 1rem;
+}
+
+.hero-info span {
+    color: #777;
+
+    font-size: 0.65rem;
+}
+
+.info-line {
+    width: 1px;
+    height: 35px;
+
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* =====================================================
+   HERO VISUAL
+===================================================== */
+
+.hero-image {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 550px;
+
+    animation: fadeIn 1.5s ease;
+}
+
+
+.perfume-light {
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(198, 161, 91, 0.25),
+            transparent 65%
+        );
+
+    filter: blur(20px);
+
+    animation: pulse 5s infinite alternate;
+}
+
+
+.perfume-card {
+    width: 320px;
+    height: 430px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.01)
+        );
+
+    backdrop-filter: blur(15px);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.7);
+
+    transform: rotate(-4deg);
+
+    transition: 0.5s;
+}
+
+.perfume-card:hover {
+    transform:
+        rotate(0deg)
+        translateY(-10px);
+}
+
+
+/* FRASCO HERO */
+
+.perfume-bottle {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.bottle-cap {
+    width: 70px;
+    height: 55px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6e511f,
+            #e8cf96,
+            #8f6b2e
+        );
+
+    border-radius: 8px 8px 3px 3px;
+}
+
+.bottle-body {
+    width: 170px;
+    height: 250px;
+
+    margin-top: 5px;
+
+    border-radius: 15px 15px 35px 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.15),
+            rgba(0, 0, 0, 0.5)
+        );
+
+    border:
+        1px solid rgba(198, 161, 91, 0.5);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        inset 0 0 30px rgba(198, 161, 91, 0.08),
+        0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.bottle-brand {
+    letter-spacing: 5px;
+
+    font-size: 0.7rem;
+
+    color: var(--gold-light);
+}
+
+.bottle-name {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2rem;
+
+    letter-spacing: 3px;
+
+    margin-top: 8px;
+}
+
+.bottle-line {
+    width: 70px;
+    height: 1px;
+
+    background: var(--gold);
+
+    margin: 15px 0;
+}
+
+.bottle-body small {
+    font-size: 0.45rem;
+
+    letter-spacing: 3px;
+
+    color: #aaa;
+}
+
+
+/* LABELS FLUTUANTES */
+
+.floating-label {
+    position: absolute;
+
+    padding: 13px 18px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(20, 20, 20, 0.7);
+
+    backdrop-filter: blur(15px);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.1);
+
+    color: #ddd;
+
+    font-size: 0.7rem;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.4);
+
+    animation: float 4s ease-in-out infinite;
+}
+
+.floating-label span {
+    color: var(--gold);
+    margin-right: 8px;
+}
+
+.label-1 {
+    top: 15%;
+    right: 0;
+}
+
+.label-2 {
+    bottom: 15%;
+    left: 0;
+
+    animation-delay: 1.5s;
+}
+
+
+/* =====================================================
+   DECORAÇÕES HERO
+===================================================== */
+
+.hero-glow {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    opacity: 0.15;
+}
+
+.glow-1 {
+    width: 400px;
+    height: 400px;
+
+    background: var(--gold);
+
+    top: -100px;
+    left: -100px;
+}
+
+.glow-2 {
+    width: 500px;
+    height: 500px;
+
+    background: #8f6b2e;
+
+    bottom: -250px;
+    right: -100px;
+}
+
+.hero-circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(198, 161, 91, 0.08);
+}
+
+.circle-1 {
+    width: 600px;
+    height: 600px;
+
+    right: -250px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.circle-2 {
+    width: 900px;
+    height: 900px;
+
+    right: -400px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+
+/* =====================================================
+   SOBRE
+===================================================== */
+
+.about {
+    background: #090909;
+}
+
+.about-container {
+    max-width: 1300px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+
+/* VISUAL SOBRE */
+
+.about-visual {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+    min-height: 500px;
+}
+
+.about-image {
+    width: 350px;
+    height: 450px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 25px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(198, 161, 91, 0.2),
+            transparent 60%
+        ),
+        linear-gradient(
+            135deg,
+            #151515,
+            #050505
+        );
+
+    border:
+        1px solid rgba(198, 161, 91, 0.2);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.about-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 100px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.1),
+            transparent
+        );
+
+    transform: rotate(-45deg);
+
+    animation: shine 7s infinite;
+}
+
+
+/* FRASCO SOBRE */
+
+.about-bottle {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    z-index: 2;
+}
+
+.about-cap {
+    width: 60px;
+    height: 45px;
+
+    background: var(--gradient-gold);
+
+    border-radius: 5px;
+}
+
+.about-body {
+    width: 180px;
+    height: 260px;
+
+    margin-top: 5px;
+
+    border-radius: 10px 10px 40px 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.15),
+            rgba(0,0,0,0.6)
+        );
+
+    border:
+        1px solid var(--gold);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.about-body span {
+    color: var(--gold);
+
+    letter-spacing: 5px;
+
+    font-size: 0.65rem;
+}
+
+.about-body strong {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2.3rem;
+
+    letter-spacing: 3px;
+}
+
+
+/* CONTEÚDO SOBRE */
+
+.about-content p {
+    color: var(--gray);
+
+    line-height: 1.9;
+
+    margin-top: 25px;
+}
+
+.about-features {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.about-feature {
+    color: #ddd;
+
+    font-size: 0.85rem;
+}
+
+.about-feature span {
+    color: var(--gold);
+
+    margin-right: 10px;
+}
+
+.text-link {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    color: var(--gold);
+
+    text-decoration: none;
+
+    font-size: 0.85rem;
+
+    transition: 0.3s;
+}
+
+.text-link:hover {
+    transform: translateX(8px);
+}
+
+
+/* =====================================================
+   PRODUTOS
+===================================================== */
+
+.products {
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(198, 161, 91, 0.06),
+            transparent 30%
+        ),
+        var(--black);
+}
+
+.products-grid {
+    max-width: 1300px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+/* CARD */
+
+.product-card {
+    background: #101010;
+
+    border:
+        1px solid rgba(255,255,255,0.06);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition: 0.4s;
+}
+
+.product-card:hover {
+    transform: translateY(-12px);
+
+    border-color:
+        rgba(198, 161, 91, 0.4);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.5);
+}
+
+
+/* IMAGEM DO PRODUTO */
+
+.product-image {
+    height: 300px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.image-dark {
+    background:
+        radial-gradient(circle, #303030, #080808);
+}
+
+.image-gold {
+    background:
+        radial-gradient(circle, #6d5429, #15110a);
+}
+
+.image-purple {
+    background:
+        radial-gradient(circle, #37254a, #0d0911);
+}
+
+.image-red {
+    background:
+        radial-gradient(circle, #512121, #110606);
+}
+
+.image-blue {
+    background:
+        radial-gradient(circle, #17394b, #071014);
+}
+
+.image-champagne {
+    background:
+        radial-gradient(circle, #665d4b, #15140f);
+}
+
+
+/* FRASCO PEQUENO */
+
+.small-bottle {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    transition: 0.5s;
+}
+
+.product-card:hover .small-bottle {
+    transform:
+        translateY(-10px)
+        scale(1.05);
+}
+
+.mini-cap {
+    width: 42px;
+    height: 35px;
+
+    background: var(--gradient-gold);
+
+    border-radius: 4px;
+}
+
+.mini-body {
+    width: 100px;
+    height: 150px;
+
+    margin-top: 4px;
+
+    border-radius: 8px 8px 25px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.2),
+            rgba(0,0,0,0.6)
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.2);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.mini-body span {
+    font-size: 0.45rem;
+
+    letter-spacing: 3px;
+
+    color: var(--gold-light);
+}
+
+
+/* CATEGORIA */
+
+.product-category {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    padding: 8px 13px;
+
+    background:
+        rgba(0,0,0,0.4);
+
+    backdrop-filter: blur(10px);
+
+    border:
+        1px solid rgba(255,255,255,0.1);
+
+    border-radius: 30px;
+
+    font-size: 0.6rem;
+
+    color: var(--gold-light);
+}
+
+
+/* CONTEÚDO PRODUTO */
+
+.product-content {
+    padding: 28px;
+}
+
+.product-content h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.8rem;
+
+    font-weight: 500;
+}
+
+.product-content p {
+    color: #888;
+
+    font-size: 0.78rem;
+
+    line-height: 1.8;
+
+    margin: 15px 0 20px;
+}
+
+.product-content a {
+    color: var(--gold);
+
+    text-decoration: none;
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.product-content a:hover {
+    color: var(--gold-light);
+}
+
+
+/* =====================================================
+   BENEFÍCIOS
+===================================================== */
+
+.benefits {
+    background: #090909;
+}
+
+.benefits-grid {
+    max-width: 1300px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.benefit-card {
+    padding: 40px 25px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.04),
+            rgba(255,255,255,0.01)
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.06);
+
+    transition: 0.4s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(198,161,91,0.4);
+}
+
+.benefit-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(198,161,91,0.1);
+
+    border:
+        1px solid rgba(198,161,91,0.25);
+
+    font-size: 1.5rem;
+
+    margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+    font-size: 0.95rem;
+
+    margin-bottom: 15px;
+}
+
+.benefit-card p {
+    color: #888;
+
+    font-size: 0.75rem;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   DESTAQUE
+===================================================== */
+
+.highlight {
+    min-height: 650px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(198,161,91,0.15),
+            transparent 35%
+        ),
+        #070707;
+}
+
+.highlight::before {
+    content: "";
+
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(198,161,91,0.08);
+
+    animation: rotate 20s linear infinite;
+}
+
+.highlight-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 800px;
+
+    padding: 40px;
+}
+
+.highlight h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(4rem, 7vw, 7rem);
+
+    font-weight: 500;
+
+    line-height: 0.9;
+}
+
+.highlight h2 span {
+    display: block;
+
+    color: var(--gold);
+}
+
+.highlight p:not(.section-tag) {
+    color: #aaa;
+
+    max-width: 650px;
+
+    margin: 30px auto;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   CONSULTOR
+===================================================== */
+
+.consultant {
+    background: #0b0b0b;
+}
+
+.consultant-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 80px;
+
+    border-radius: 30px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(198,161,91,0.08),
+            rgba(255,255,255,0.02)
+        );
+
+    border:
+        1px solid rgba(198,161,91,0.15);
+}
+
+.consultant-content p:not(.section-tag) {
+    color: #999;
+
+    line-height: 1.8;
+
+    margin-top: 25px;
+}
+
+
+/* BOTÃO WHATSAPP */
+
+.whatsapp-btn {
+    margin-top: 35px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 18px 30px;
+
+    background: var(--gradient-gold);
+
+    color: var(--black);
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+    transition: 0.4s;
+}
+
+.whatsapp-btn:hover {
+    transform:
+        translateY(-5px)
+        scale(1.02);
+
+    box-shadow:
+        0 15px 40px rgba(198,161,91,0.3);
+}
+
+.whatsapp-icon {
+    font-size: 1.2rem;
+}
+
+
+/* DECORAÇÃO CONSULTOR */
+
+.consultant-decoration {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.consultant-circle {
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(198,161,91,0.2),
+            rgba(0,0,0,0)
+        );
+
+    border:
+        1px solid rgba(198,161,91,0.3);
+
+    position: relative;
+}
+
+.consultant-circle::before,
+.consultant-circle::after {
+    content: "";
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(198,161,91,0.15);
+}
+
+.consultant-circle::before {
+    width: 360px;
+    height: 360px;
+}
+
+.consultant-circle::after {
+    width: 430px;
+    height: 430px;
+}
+
+.consultant-circle span {
+    color: var(--gold);
+
+    letter-spacing: 8px;
+
+    font-size: 0.7rem;
+}
+
+.consultant-circle strong {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 3rem;
+
+    letter-spacing: 4px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    padding: 80px 8% 20px;
+
+    background: #050505;
+
+    border-top:
+        1px solid rgba(255,255,255,0.06);
+}
+
+.footer-container {
+    max-width: 1300px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 80px;
+}
+
+.footer-brand p {
+    color: #777;
+
+    font-size: 0.8rem;
+
+    line-height: 1.8;
+
+    max-width: 350px;
+
+    margin-top: 20px;
+}
+
+.footer-links,
+.footer-social {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+.footer-links h4,
+.footer-social h4 {
+    color: var(--gold);
+
+    font-size: 0.75rem;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+.footer-links a,
+.footer-social a {
+    color: #888;
+
+    text-decoration: none;
+
+    font-size: 0.75rem;
+
+    transition: 0.3s;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    color: var(--gold);
+
+    transform: translateX(5px);
+}
+
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+    max-width: 1300px;
+
+    margin: 60px auto 0;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.06);
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #555;
+
+    font-size: 0.65rem;
+}
+
+
+/* =====================================================
+   ANIMAÇÕES
+===================================================== */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(0.9);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: scale(1.1);
+        opacity: 0.6;
+    }
+
+}
+
+
+@keyframes shine {
+
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 150%;
+    }
+
+}
+
+
+@keyframes rotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE - TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        display: none;
+    }
+
+    .header {
+        padding: 15px 20px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .hero-info {
+        justify-content: center;
+    }
+
+    .hero-image {
+        min-height: 450px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-features {
+        align-items: center;
+    }
+
+    .products-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .benefits-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .consultant-container {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .consultant-decoration {
+        margin-top: 50px;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE - MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .section {
+        padding: 90px 6%;
+    }
+
+
+    /* HEADER */
+
+    .header {
+        top: 10px;
+
+        width: 94%;
+
+        border-radius: 15px;
+    }
+
+    .header-btn {
+        display: none;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding:
+            140px 6%
+            70px;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .hero-info {
+        gap: 15px;
+
+        margin-top: 40px;
+    }
+
+    .hero-info strong {
+        font-size: 0.8rem;
+    }
+
+    .hero-info span {
+        font-size: 0.55rem;
+    }
+
+
+    /* HERO PERFUME */
+
+    .hero-image {
+        min-height: 400px;
+    }
+
+    .perfume-card {
+        width: 250px;
+        height: 340px;
+    }
+
+    .bottle-body {
+        width: 140px;
+        height: 210px;
+    }
+
+    .bottle-cap {
+        width: 60px;
+        height: 45px;
+    }
+
+    .floating-label {
+        font-size: 0.6rem;
+
+        padding: 10px 13px;
+    }
+
+    .label-1 {
+        right: -10px;
+    }
+
+    .label-2 {
+        left: -10px;
+    }
+
+
+    /* SOBRE */
+
+    .about-visual {
+        min-height: 400px;
+    }
+
+    .about-image {
+        width: 280px;
+        height: 360px;
+    }
+
+    .about-body {
+        width: 140px;
+        height: 210px;
+    }
+
+
+    /* PRODUTOS */
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 270px;
+    }
+
+
+    /* BENEFÍCIOS */
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* DESTAQUE */
+
+    .highlight {
+        min-height: 600px;
+    }
+
+    .highlight-content {
+        padding: 20px;
+    }
+
+
+    /* CONSULTOR */
+
+    .consultant-container {
+        padding: 50px 25px;
+    }
+
+    .consultant-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .consultant-circle::before {
+        width: 260px;
+        height: 260px;
+    }
+
+    .consultant-circle::after {
+        width: 310px;
+        height: 310px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        text-align: center;
+    }
+
+    .footer-brand p {
+        margin:
+            20px auto
+            0;
+    }
+
+}
