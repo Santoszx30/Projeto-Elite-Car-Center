@@ -1,0 +1,190 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body{
+    background-color:#270000 ;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Alinhamento{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 450px;
+    background-color: #0C0C0C;
+    border-radius: 10px;
+}
+
+
+.Navecacao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    width: 100%;
+    height: 130px;
+    background-color: rgb(24, 0, 0);
+}
+
+.PNavegacao{
+    font-size: 18px;
+    color:#fff;
+    margin-top: 60px;
+}
+
+
+.item-navegacao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.PNavegacao {
+    margin-top: 80px;
+    font-size: 16px;
+    color: #eeecec;
+
+}
+
+.item-navegacao i {
+    margin-top: 67px;
+    color: #ffffff;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+img{
+    margin-left: -220px;
+    margin-right: 80px;
+    width: 150px;
+    height: 150px;
+}
+.Centro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.h1Recuperar{
+    margin-top: 50px;
+    color: white;
+    border-bottom: solid;
+    border-color: rgb(224, 224, 224);
+    margin-bottom: 10px;
+}
+
+.PCodigo{
+    font-size: 15px;
+    margin-top: 0px;
+    color: gray;
+}
+
+
+.CampoCodigo{
+    width: 85px;
+    height: 80px;
+}
+
+.Codigos{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.PInsirir{
+    margin-right: 205px;
+    color: white;
+    font-size: 15px;
+}
+
+
+.CampoCodigo{
+    font-size: 20px;
+    background-color: transparent;
+    border: solid;
+    border-color: rgb(102, 0, 0);
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-right: 0px;
+}
+
+.input::placeholder{
+    color: #fff;
+}
+
+.CampoCodigo {
+    box-sizing: border-box;
+    padding-left: 10px;
+    background-color: transparent;
+    border: 1px solid rgb(65, 64, 64);
+    color: white;
+    outline: none;
+    border-radius: 10px;
+}
+
+#BotaoVerificar{
+    color: white;
+    font-size: 15px;
+    background-color: red;
+    margin-top: 30px;
+    width: 390px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#BotaoVoltar{
+    background: none;
+    border: none;
+    color: #cccccc;
+    cursor: pointer;
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+#BotaoVoltar:hover{
+    border-bottom: solid;
+    border-color: #747373;
+}
+
+#BotaoVerificar:hover{
+    background-color: rgb(173, 1, 1);
+}
+
+.Centro{
+    margin-bottom: -80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+
+.CampoCodigo {
+    font-size: 32px;
+    text-align: center;
+    padding: 0;
+}
