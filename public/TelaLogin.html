@@ -8,6 +8,10 @@
     <title>Elite Car Center | Login</title>
 
     <link rel="stylesheet" href="TelaLogin.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -16,15 +20,42 @@
 
         <img src="Logo elite car center.png" alt="Logo Elite Car Center">
 
-        <h1>Centro Automotivo de Elite</h1>
+        <h1>
+            Centro Automotivo de Elite
+        </h1>
 
         <nav>
-            <a href="#">Início</a>
-            <a href="#">Loja de Elite</a>
-            <a href="#">Notificações</a>
-            <a href="#">Meus Veículos</a>
-            <a href="#">Minha Conta</a>
-            <a href="#">Agendamento</a>
+
+            <a href="#">
+                <i class="fa-solid fa-house"></i>
+                Início
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-store"></i>
+                Loja de Elite
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-bell"></i>
+                Notificações
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-car"></i>
+                Meus Veículos
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-user"></i>
+                Minha Conta
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-calendar-check"></i>
+                Agendamento
+            </a>
+
         </nav>
 
     </header>
@@ -34,45 +65,82 @@
         <section class="login">
 
             <h2>
-                Faça <span>Login</span>
-            </h2>
 
+                <i class="fa-solid fa-right-to-bracket"></i>
+
+                Faça <span>Login</span>
+
+            </h2>
 
             <div class="campo">
 
                 <label for="usuario">
+
+                    <i class="fa-solid fa-user"></i>
+
                     Usuário
+
                 </label>
 
-                <input type="text" id="usuario" placeholder="" autocomplete="username">
+                <input
+                    type="text"
+                    id="usuario"
+                    placeholder=""
+                    autocomplete="username"
+                >
 
             </div>
-
 
             <div class="campo">
 
                 <label for="senha">
+
+                    <i class="fa-solid fa-lock"></i>
+
                     Senha
+
                 </label>
 
-                <input type="password" id="senha" placeholder="" autocomplete="current-password">
+                <input
+                    type="password"
+                    id="senha"
+                    placeholder=""
+                    autocomplete="current-password"
+                >
 
             </div>
 
             <div class="links">
 
                 <a href="#">
+
+                    <i class="fa-solid fa-key"></i>
+
                     Esqueci minha senha
+
                 </a>
 
+
                 <a href="Cadastro.html">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
                     Cadastre-se!
+
                 </a>
 
             </div>
 
-            <button class="botao-entrar" type="button" onclick="entrar()">
+            <button
+                class="botao-entrar"
+                type="button"
+                onclick="entrar()"
+            >
+
+                <i class="fa-solid fa-right-to-bracket"></i>
+
                 Entrar
+
             </button>
 
         </section>
@@ -82,19 +150,38 @@
         <section class="social">
 
             <h2>
+
+                <i class="fa-solid fa-shield-halved"></i>
+
                 Login por:
+
             </h2>
+
 
             <div class="social-botoes">
 
-                <button class="botao-social google" type="button">
+                <button
+                    class="botao-social google"
+                    type="button"
+                >
+
+                    <i class="fa-brands fa-google"></i>
+
                     Google
+
                 </button>
 
+                <button
+                    class="botao-social apple"
+                    type="button"
+                >
 
-                <button class="botao-social apple" type="button">
+                    <i class="fa-brands fa-apple"></i>
+
                     Apple
+
                 </button>
+
 
             </div>
 
@@ -107,30 +194,46 @@
         <div class="atendimento">
 
             <h3>
+
+                <i class="fa-solid fa-headset"></i>
+
                 Atendimento
+
             </h3>
 
-            <p>
-                08:00 às 20:00 - Segunda a Sexta
-            </p>
 
             <p>
+
+                <i class="fa-regular fa-clock"></i>
+
+                08:00 às 20:00 - Segunda a Sexta
+
+            </p>
+
+
+            <p>
+
+                <i class="fa-solid fa-phone"></i>
+
                 SAC: 0009-8120-9803
+
             </p>
 
         </div>
 
-
         <div class="copyright">
 
             <p>
-                © 2026 Elite Corporation. Todos os direitos reservados.
+
+                <i class="fa-regular fa-copyright"></i>
+
+                2026 Elite Corporation. Todos os direitos reservados.
+
             </p>
 
         </div>
 
     </footer>
-
 
     <script src="TelaLogin.js"></script>
 

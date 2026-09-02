@@ -1,30 +1,101 @@
-    const camponome = document.getElementById("nome");
-    const campocpf = document.getElementById("cpf");
-    const campoemail = document.getElementById("email");
-    const campousuario = document.getElementById("usuario");
-    const campotelefone = document.getElementById("telefone");
-    const camposenha = document.getElementById("senha");
-    const campobotao = document.getElementById("botaoCadastrar");
+const camponome = document.getElementById("nome");
+const campocpf = document.getElementById("cpf");
+const campoemail = document.getElementById("email");
+const campousuario = document.getElementById("usuario");
+const campotelefone = document.getElementById("telefone");
+const camposenha = document.getElementById("senha");
 
-if (botao) {
+const campobotao = document.querySelector(".botaoadastrar");
 
-    botao.addEventListener("click", function () {
+
+if (campobotao) {
+
+    campobotao.addEventListener("click", function () {
 
         const nome = camponome.value.trim();
-         const email = camponome.value.trim();
-          const cpf = camponome.value.trim();
-          const senha = camponome.value.trim();
-          const telefone = camponome.value.trim();
-          const usuario = camponome.value.trim();
+        const email = campoemail.value.trim();
+        const cpf = campocpf.value.trim();
+        const senha = camposenha.value.trim();
+        const telefone = campotelefone.value.trim();
+        const usuario = campousuario.value.trim();
 
-          if (nome === "" || email === "" || cpf === "" || senha === "" || telefone === "" || usuario === "" )
-            alert("Preenhca todos os campos de cadastro para realiza-lo!");
-        return
-    })
+        if (
+            nome === "" ||
+            email === "" ||
+            cpf === "" ||
+            senha === "" ||
+            telefone === "" ||
+            usuario === ""
+        ) {
 
-    const novoUsuario = {
-        nome: nome,
-        email: email,
-        cpf: 
-    }
+            alert("Preencha todos os campos para criar sua conta!");
+
+            return;
+        }
+
+        let usuarios = JSON.parse(
+            localStorage.getItem("usuarios")
+        ) || [];
+
+
+        const usuarioExiste = usuarios.some(function (usuarioCadastrado) {
+
+            return usuarioCadastrado.usuario === usuario;
+
+        });
+
+
+        if (usuarioExiste) {
+
+            alert("Esse usuário já está cadastrado!");
+
+            return;
+        }
+
+
+        const emailExiste = usuarios.some(function (usuarioCadastrado) {
+
+            return usuarioCadastrado.email === email;
+
+        });
+
+
+        if (emailExiste) {
+
+            alert("Esse e-mail já está cadastrado!");
+
+            return;
+        }
+
+        const novoUsuario = {
+
+            nome: nome,
+
+            email: email,
+
+            cpf: cpf,
+
+            senha: senha,
+
+            telefone: telefone,
+
+            usuario: usuario
+
+        };
+
+
+        usuarios.push(novoUsuario);
+
+        localStorage.setItem(
+            "usuarios",
+            JSON.stringify(usuarios)
+        );
+
+        alert("Conta criada com sucesso!");
+
+
+        window.location.href = "TelaLogin.html";
+
+    });
+
 }

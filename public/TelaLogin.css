@@ -78,7 +78,9 @@ header img {
     margin: 0 auto 8px;
 
     filter:
-        drop-shadow(0 5px 12px rgba(0, 0, 0, 0.7));
+        drop-shadow(
+            0 5px 12px rgba(0, 0, 0, 0.7)
+        );
 }
 
 
@@ -132,7 +134,38 @@ nav a {
 
     padding-bottom: 5px;
 
+    display: inline-flex;
+
+    align-items: center;
+
     transition: 0.3s ease;
+}
+
+
+/* =====================================================
+   ÍCONES DO MENU
+===================================================== */
+
+nav a i {
+    color: #ffffff;
+
+    font-size: 15px;
+
+    margin-right: 7px;
+
+    transition: 0.3s ease;
+}
+
+
+nav a:hover {
+    color: #ff3930;
+}
+
+
+nav a:hover i {
+    color: #ff3930;
+
+    transform: translateY(-2px);
 }
 
 
@@ -154,11 +187,6 @@ nav a::after {
     background: #e31b13;
 
     transition: 0.3s ease;
-}
-
-
-nav a:hover {
-    color: #ff3930;
 }
 
 
@@ -223,7 +251,9 @@ main {
 }
 
 
-/* TÍTULO LOGIN */
+/* =====================================================
+   TÍTULO LOGIN
+===================================================== */
 
 .login h2 {
     font-size: 34px;
@@ -240,6 +270,27 @@ main {
 
 
 /* =====================================================
+   ÍCONE DO TÍTULO DO LOGIN
+===================================================== */
+
+.login h2 i {
+    color: #d4af37;
+
+    margin-right: 8px;
+
+    transition: 0.3s ease;
+}
+
+
+.login h2:hover i {
+    transform: scale(1.1);
+
+    text-shadow:
+        0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+
+/* =====================================================
    CAMPOS
 ===================================================== */
 
@@ -251,7 +302,11 @@ main {
 
 
 .campo label {
-    display: block;
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
 
     margin-bottom: 8px;
 
@@ -262,6 +317,34 @@ main {
     color: #e5e5e5;
 }
 
+
+/* =====================================================
+   ÍCONES DOS CAMPOS
+===================================================== */
+
+.campo label i {
+    width: 20px;
+
+    text-align: center;
+
+    color: #d4af37;
+
+    font-size: 15px;
+
+    transition: 0.3s ease;
+}
+
+
+.campo:focus-within label i {
+    color: #ff3930;
+
+    transform: scale(1.1);
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
 
 .campo input {
     width: 100%;
@@ -283,6 +366,11 @@ main {
     font-size: 17px;
 
     transition: 0.3s ease;
+}
+
+
+.campo input::placeholder {
+    color: #777;
 }
 
 
@@ -319,6 +407,19 @@ main {
 
     font-size: 15px;
 
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    transition: 0.3s ease;
+}
+
+
+.links a i {
+    font-size: 13px;
+
     transition: 0.3s ease;
 }
 
@@ -327,6 +428,11 @@ main {
     color: #ff7777;
 
     text-decoration: underline;
+}
+
+
+.links a:hover i {
+    transform: translateX(3px);
 }
 
 
@@ -371,6 +477,19 @@ main {
 }
 
 
+/* =====================================================
+   ÍCONE DO BOTÃO ENTRAR
+===================================================== */
+
+.botao-entrar i {
+    margin-right: 8px;
+
+    font-size: 17px;
+
+    transition: 0.3s ease;
+}
+
+
 .botao-entrar:hover {
     background:
         linear-gradient(
@@ -383,6 +502,11 @@ main {
 
     box-shadow:
         0 14px 30px rgba(212, 175, 55, 0.22);
+}
+
+
+.botao-entrar:hover i {
+    transform: translateX(4px);
 }
 
 
@@ -442,6 +566,31 @@ main {
 }
 
 
+/* =====================================================
+   ÍCONE DO TÍTULO SOCIAL
+===================================================== */
+
+.social h2 i {
+    color: #d4af37;
+
+    margin-right: 7px;
+
+    transition: 0.3s ease;
+}
+
+
+.social h2:hover i {
+    transform: scale(1.1);
+
+    text-shadow:
+        0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+
+/* =====================================================
+   BOTÕES SOCIAIS
+===================================================== */
+
 .social-botoes {
     width: 100%;
 
@@ -454,10 +603,6 @@ main {
     gap: 20px;
 }
 
-
-/* =====================================================
-   BOTÕES SOCIAIS
-===================================================== */
 
 .botao-social {
     width: 210px;
@@ -480,6 +625,25 @@ main {
 
     cursor: pointer;
 
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    transition: 0.3s ease;
+}
+
+
+/* =====================================================
+   ÍCONES DOS BOTÕES SOCIAIS
+===================================================== */
+
+.botao-social i {
+    font-size: 21px;
+
     transition: 0.3s ease;
 }
 
@@ -500,6 +664,11 @@ main {
 
     box-shadow:
         0 12px 25px rgba(208, 0, 0, 0.18);
+}
+
+
+.botao-social:hover i {
+    transform: scale(1.15);
 }
 
 
@@ -559,6 +728,19 @@ footer {
     font-size: 18px;
 
     letter-spacing: 0.5px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.atendimento h3 i {
+    color: #d4af37;
+
+    font-size: 16px;
 }
 
 
@@ -568,6 +750,91 @@ footer {
     margin-bottom: 12px;
 
     font-size: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.atendimento p i {
+    color: #d4af37;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   BOTÃO DE ATENDIMENTO
+===================================================== */
+
+.atendimento button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    width: 165px;
+
+    height: 38px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #a00000,
+            #d00000
+        );
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.atendimento button i {
+    font-size: 15px;
+
+    transition: 0.3s ease;
+}
+
+
+.atendimento button:hover {
+    background:
+        linear-gradient(
+            90deg,
+            #c00000,
+            #ed0000
+        );
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(208, 0, 0, 0.2);
+}
+
+
+.atendimento button:hover i {
+    transform: translateX(3px);
+}
+
+
+.atendimento button:active {
+    transform: scale(0.97);
 }
 
 
@@ -586,6 +853,21 @@ footer {
     color: #cccccc;
 
     font-size: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+}
+
+
+.copyright p i {
+    color: #e31b13;
+
+    font-size: 14px;
 }
 
 
@@ -644,6 +926,12 @@ footer {
         text-align: center;
     }
 
+
+    .atendimento h3,
+    .atendimento p {
+        justify-content: center;
+    }
+
 }
 
 
@@ -684,6 +972,13 @@ footer {
     }
 
 
+    nav a i {
+        font-size: 12px;
+
+        margin-right: 4px;
+    }
+
+
     main {
         padding: 35px 15px;
     }
@@ -706,8 +1001,19 @@ footer {
     }
 
 
+    .campo label i {
+        font-size: 14px;
+
+        width: 18px;
+    }
+
+
     .campo input {
         height: 52px;
+
+        font-size: 16px;
+
+        padding: 0 14px;
     }
 
 
@@ -729,6 +1035,11 @@ footer {
     }
 
 
+    .botao-entrar i {
+        font-size: 16px;
+    }
+
+
     .social h2 {
         font-size: 24px;
     }
@@ -738,6 +1049,13 @@ footer {
         width: 100%;
 
         max-width: 300px;
+
+        font-size: 18px;
+    }
+
+
+    .botao-social i {
+        font-size: 20px;
     }
 
 
@@ -749,6 +1067,133 @@ footer {
     .atendimento p,
     .copyright p {
         font-size: 14px;
+    }
+
+}
+
+
+/* =====================================================
+   CELULARES MUITO PEQUENOS
+===================================================== */
+
+@media (max-width: 400px) {
+
+    header {
+        padding:
+            9px 12px
+            15px;
+    }
+
+
+    header img {
+        width: 65px;
+
+        height: 55px;
+    }
+
+
+    header h1 {
+        font-size: 21px;
+    }
+
+
+    nav {
+        gap: 9px;
+    }
+
+
+    nav a {
+        font-size: 11px;
+    }
+
+
+    nav a i {
+        font-size: 10px;
+
+        margin-right: 3px;
+    }
+
+
+    main {
+        padding: 25px 10px;
+    }
+
+
+    .login {
+        padding: 25px 15px;
+    }
+
+
+    .login h2 {
+        font-size: 26px;
+    }
+
+
+    .campo {
+        margin-bottom: 18px;
+    }
+
+
+    .campo label {
+        font-size: 14px;
+
+        margin-bottom: 7px;
+    }
+
+
+    .campo input {
+        height: 48px;
+
+        font-size: 15px;
+    }
+
+
+    .links a {
+        font-size: 13px;
+    }
+
+
+    .botao-entrar {
+        font-size: 17px;
+
+        padding: 14px;
+    }
+
+
+    .social h2 {
+        font-size: 21px;
+    }
+
+
+    .botao-social {
+        font-size: 17px;
+
+        padding: 17px;
+    }
+
+
+    .botao-social i {
+        font-size: 18px;
+    }
+
+
+    footer {
+        padding: 25px 15px;
+    }
+
+
+    .atendimento h3 {
+        font-size: 16px;
+    }
+
+
+    .atendimento p {
+        font-size: 12px;
+    }
+
+
+    .copyright p {
+        font-size: 11px;
     }
 
 }
