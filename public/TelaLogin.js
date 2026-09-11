@@ -1,40 +1,34 @@
 const campoUsuario = document.getElementById("usuario");
 const campoSenha = document.getElementById("senha");
-const campoBotao = document.querySelector(".botaoEntrar");
+const campoBotao = document.querySelector(".botao-entrar");
 const campoMensagem = document.querySelector(".mensagem");
 
-campoBotao.addEventListener("click", function() {
-    const usuario = campoUsuario.value;
-    const senha = campoSenha.value;
+campoBotao.addEventListener("click", function () {
+    const usuario = campoUsuario.value.trim();
+    const senha = campoSenha.value.trim();
 
-})
-if (usuario === "" || senha === ""){
-    campoMensagem.textContent = "Por favor, preencha todos os campos.";
-    return;
-}
-
-fetch("/login", {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify({ usuario: usuario, senha: senha})
-})
-
-.then(function (resposta) {
-    return resposta.json(); .then(function (dados) {
-
-return {status :resposta.status, dados: dados};
-
-});
-})
-
-.then(function (resultado) {
-    if(resultado.status >= 400) {
-        campoMensagem.textContent = resultados.dados.erro;
+    if (usuario === "" || senha === "") {
+        campoMensagem.textContent = "Por favor, preencha todos os campos.";
         return;
     }
 
-    sessionStorage.setItem("usuarioLogado", JSON.stringify(resultado.dados));
-    window.location.href = "/TelaPrincipal.html";
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
+    const usuarioEncontrado = usuarios.find(function (usuarioCadastrado) {
+        return usuarioCadastrado.usuario === usuario;
+    });
+
+    if (!usuarioEncontrado) {
+        campoMensagem.textContent = "Usuário não encontrado.";
+        return;
+    }
+
+    if (usuarioEncontrado.senha !== senha) {
+        campoMensagem.textContent = "Senha incorreta.";
+        return;
+    }
+
+    campoMensagem.textContent = "";
+    sessionStorage.setItem("usuarioLogado", JSON.stringify(usuarioEncontrado));
+    window.location.href = "TelaPerfil.html";
 });
-

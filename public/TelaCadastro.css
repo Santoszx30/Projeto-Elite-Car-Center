@@ -1,4 +1,3 @@
-```css
 /* =====================================================
    CONFIGURAÇÕES GERAIS
 ===================================================== */
@@ -470,7 +469,7 @@ form {
    BOTÃO CRIAR CONTA
 ===================================================== */
 
-.botaoadastrar {
+.botaoCadastrar {
     width: 55%;
 
     min-width: 280px;
@@ -518,13 +517,13 @@ form {
    ÍCONE DO BOTÃO
 ===================================================== */
 
-.botaoadastrar i {
+.botaoCadastrar i {
     font-size: 17px;
 
     transition: 0.3s ease;
 }
 
-.botaoadastrar:hover {
+.botaoCadastrar:hover {
     background:
         linear-gradient(
             90deg,
@@ -539,13 +538,13 @@ form {
         rgba(212, 175, 55, 0.22);
 }
 
-.botaoadastrar:hover i {
+.botaoCadastrar:hover i {
     transform:
         translateX(4px)
         scale(1.05);
 }
 
-.botaoadastrar:active {
+.botaoCadastrar:active {
     transform:
         translateY(1px)
         scale(0.98);
@@ -1109,7 +1108,7 @@ footer {
 
     /* BOTÃO */
 
-    .botaoadastrar {
+    .botaoCadastrar {
         width: 100%;
 
         min-width: 0;
@@ -1122,7 +1121,7 @@ footer {
         font-size: 18px;
     }
 
-    .botaoadastrar i {
+    .botaoCadastrar i {
         font-size: 16px;
     }
 
@@ -1354,7 +1353,7 @@ footer {
 
     /* BOTÃO */
 
-    .botaoadastrar {
+    .botaoCadastrar {
         font-size: 17px;
 
         margin-top: 24px;
@@ -1363,7 +1362,7 @@ footer {
             13px 16px;
     }
 
-    .botaoadastrar i {
+    .botaoCadastrar i {
         font-size: 15px;
     }
 
@@ -1410,4 +1409,3 @@ footer {
     }
 
 }
-```
