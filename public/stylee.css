@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.site {
+    width: 82%;
+    margin: auto;
+    background: #280405;
+    min-height: 100vh;
+}
+
+
+
+
+header {
+    height: 160px;
+    position: relative;
+    border-bottom: 1px solid #401010;
+}
+
+.logo {
+    position: absolute;
+    left: 25px;
+    top: 20px;
+}
+
+.logo img {
+    width: 105px;
+}
+
+header h1 {
+    text-align: center;
+    padding-top: 57px;
+    font-size: 25px;
+    color: #a90000;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 35px;
+}
+
+nav a {
+    color: #e00000;
+    text-decoration: none;
+    font-size: 23px;
+    padding-bottom: 8px;
+}
+
+nav i {
+    color: white;
+    margin-right: 8px;
+}
+
+nav a:hover {
+    color: #ff3333;
+}
+
+nav .ativo {
+    border-bottom: 4px solid red;
+}
+
+
+
+
+main {
+    min-height: 650px;
+    display: flex;
+    justify-content: space-between;
+    padding: 105px 50px 65px;
+}
+
+
+
+
+.texto {
+    width: 42%;
+}
+
+.texto h2 {
+    font-size: 48px;
+    line-height: 0.95;
+    font-weight: 300;
+    letter-spacing: -2px;
+}
+
+.texto h2 span {
+    color: #e5b900;
+}
+
+.texto p {
+    margin-top: 10px;
+    color: #aaa;
+    font-size: 23px;
+    line-height: 1.25;
+    font-style: italic;
+}
+
+button {
+    margin-top: 35px;
+    width: 500px;
+    height: 75px;
+    background: transparent;
+    border: 2px solid #c59b00;
+    border-radius: 9px;
+    color: #d4ac00;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #c59b00;
+    color: #250000;
+}
+
+
+
+
+.carro-area {
+    width: 52%;
+    position: relative;
+}
+
+.carro {
+    width: 100%;
+    height: 470px;
+    background: #420607;
+    border-radius: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carro img {
+    width: 65%;
+    max-height: 350px;
+    object-fit: contain;
+}
+
+
+
+
+.black {
+    position: absolute;
+    right: 0;
+    bottom: -60px;
+
+    border: 1px solid white;
+    border-radius: 10px;
+
+    padding: 11px 20px;
+    font-size: 22px;
+    color: #e3b800;
+
+    background: #050505;
+}
+
+.black i {
+    margin-right: 12px;
+    color: #e3b800;
+}
+
+
+
+
+footer {
+    height: 80px;
+    background: #210304;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 20px;
+    font-size: 19px;
+}
+
+
+
+
+@media (max-width: 1000px) {
+
+    .site {
+        width: 100%;
+    }
+
+    header {
+        height: auto;
+        padding: 20px;
+    }
+
+    header h1 {
+        padding-top: 10px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    nav a {
+        font-size: 17px;
+    }
+
+    main {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .texto,
+    .carro-area {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
