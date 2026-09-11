@@ -5,7 +5,7 @@ const campousuario = document.getElementById("usuario");
 const campotelefone = document.getElementById("telefone");
 const camposenha = document.getElementById("senha");
 
-const campobotao = document.querySelector(".botaoadastrar");
+const campobotao = document.querySelector(".botaoCadastrar");
 
 
 if (campobotao) {
