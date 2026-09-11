@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Centro Automotivo de Elite - Fale Conosco</title>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="faleConosco.css">
+</head>
+
+<body>
+
+  <div class="pagina">
+
+   
+    <header>
+
+      <div class="logo-area">
+        <img src="Logo elite car center.png" alt="Centro Automotivo de Elite">
+      </div>
+
+      <div class="header-centro">
+
+        <h2>CENTRO AUTOMOTIVO DE ELITE</h2>
+
+        <button class="back-btn" type="button">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Voltar para o Site</span>
+        </button>
+
+      </div>
+
+    </header>
+
+
+    <main>
+
+      <h1>FALE CONOSCO</h1>
+
+      <form>
+
+        <div class="col-esquerda">
+
+          <div class="campo">
+
+            <span class="icone">
+              <i class="fa-solid fa-user"></i>
+            </span>
+
+            <input
+              type="text"
+              name="nome"
+              placeholder="Nome"
+            >
+
+          </div>
+
+
+          <div class="campo">
+
+            <span class="icone">
+              <i class="fa-solid fa-envelope"></i>
+            </span>
+
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail"
+            >
+
+          </div>
+
+
+          <div class="campo">
+
+            <span class="icone">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </span>
+
+            <input
+              type="tel"
+              name="telefone"
+              placeholder="Telefone"
+            >
+
+          </div>
+
+        </div>
+
+
+        <div class="col-direita">
+
+          <div class="grupo">
+
+            <label for="assunto">
+              Assunto
+            </label>
+
+            <div class="select-wrapper">
+
+              <select id="assunto" name="assunto">
+
+                <option value="">
+                  Selecione o Assunto
+                </option>
+
+                <option value="agendamento">
+                  Agendamento
+                </option>
+
+                <option value="orcamento">
+                  Orçamento
+                </option>
+
+                <option value="duvida">
+                  Dúvida
+                </option>
+
+              </select>
+
+              <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+          </div>
+
+
+          <div class="grupo mensagem-grupo">
+
+            <label for="mensagem">
+              Mensagem
+            </label>
+
+            <div class="textarea-wrapper">
+
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                maxlength="200"
+                placeholder="Escreva aqui..."
+              ></textarea>
+
+              <span class="contador">
+                0/200 caracteres
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="btn-wrap">
+
+          <button type="submit">
+            Enviar
+          </button>
+
+        </div>
+
+      </form>
+
+    </main>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,647 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+  }
+  
+  body {
+    background-color: #000;
+    color: #f5ece1;
+    font-family: Arial, sans-serif;
+  }
+  
+  
+  /* =========================================
+     PÁGINA PRINCIPAL
+  ========================================= */
+  
+  .pagina {
+    width: 1440px;
+    max-width: 100%;
+    min-height: 843px;
+    margin: 0 auto;
+    background-color: #250707;
+  }
+  
+  
+  /* =========================================
+     CABEÇALHO
+  ========================================= */
+  
+  header {
+    width: 100%;
+    height: 151px;
+  
+    display: flex;
+    align-items: center;
+  
+    padding: 0 30px;
+  
+    background-color: #200506;
+  
+    border-bottom: 1px solid #3e0c0b;
+  }
+  
+  
+  /* =========================================
+     LOGO
+  ========================================= */
+  
+  .logo-area {
+    width: 105px;
+    height: 130px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    flex-shrink: 0;
+  }
+  
+  .logo-area img {
+    width: 100px;
+    height: auto;
+  
+    display: block;
+  
+    margin: 0;
+  }
+  
+  
+  /* =========================================
+     CENTRO DO CABEÇALHO
+  ========================================= */
+  
+  .header-centro {
+    flex: 1;
+  
+    height: 100%;
+  
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+    justify-content: center;
+  
+    margin-right: 105px;
+  }
+  
+  
+  /* =========================================
+     TÍTULO DO CABEÇALHO
+  ========================================= */
+  
+  header h2 {
+    margin: 0 0 20px 0;
+  
+    color: #c4231d;
+  
+    font-family: "Orbitron", Arial, sans-serif;
+  
+    font-size: 24px;
+    font-weight: 800;
+  
+    letter-spacing: 2px;
+  
+    text-align: center;
+    text-transform: uppercase;
+  
+    white-space: nowrap;
+  }
+  
+  
+  /* =========================================
+     BOTÃO VOLTAR
+  ========================================= */
+  
+  .back-btn {
+    width: 402px;
+    height: 34px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    gap: 10px;
+  
+    padding: 0;
+  
+    background-color: #8b0c0a;
+  
+    border: 1px solid #9d1714;
+    border-radius: 10px;
+  
+    color: #f5ece1;
+  
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-style: italic;
+  
+    cursor: pointer;
+  
+    transition: 0.2s ease;
+  }
+  
+  .back-btn i {
+    font-size: 17px;
+  }
+  
+  .back-btn:hover {
+    background-color: #a20e0b;
+  }
+  
+  
+  /* =========================================
+     CONTEÚDO PRINCIPAL
+  ========================================= */
+  
+  main {
+    width: 100%;
+  
+    padding: 42px 45px 56px 45px;
+  }
+  
+  
+  /* =========================================
+     TÍTULO FALE CONOSCO
+  ========================================= */
+  
+  h1 {
+    margin: 0 0 35px 0;
+  
+    color: #ffffff;
+  
+    font-family: "Orbitron", Arial, sans-serif;
+  
+    font-size: 43px;
+    font-weight: 400;
+  
+    letter-spacing: 1px;
+  
+    line-height: 1;
+  
+    text-transform: uppercase;
+  }
+  
+  
+  /* =========================================
+     FORMULÁRIO
+  ========================================= */
+  
+  form {
+    width: 100%;
+  
+    display: grid;
+  
+    grid-template-columns: 1fr 1fr;
+  
+    column-gap: 17px;
+    row-gap: 0;
+  
+    align-items: start;
+  }
+  
+  
+  /* =========================================
+     COLUNAS
+  ========================================= */
+  
+  .col-esquerda,
+  .col-direita {
+    display: flex;
+    flex-direction: column;
+  
+    width: 100%;
+  }
+  
+  .col-esquerda {
+    gap: 21px;
+  }
+  
+  .col-direita {
+    gap: 22px;
+  }
+  
+  
+  /* =========================================
+     CAMPOS DA ESQUERDA
+  ========================================= */
+  
+  .campo {
+    width: 100%;
+    height: 72px;
+  
+    display: flex;
+    align-items: stretch;
+  
+    overflow: hidden;
+  
+    background-color: #210606;
+  
+    border: 1px solid #6e1715;
+    border-radius: 11px;
+  }
+  
+  
+  /* =========================================
+     ÍCONES
+  ========================================= */
+  
+  .icone {
+    width: 75px;
+    min-width: 75px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    background-color: #760d0b;
+  
+    color: #e3bd55;
+  
+    border-right: 1px solid #5b100f;
+  
+    font-size: 25px;
+  }
+  
+  .icone i {
+    color: #e3bd55;
+  }
+  
+  
+  /* =========================================
+     INPUTS
+  ========================================= */
+  
+  .campo input {
+    width: 100%;
+    height: 100%;
+  
+    flex: 1;
+  
+    padding: 0 16px;
+  
+    border: none;
+    outline: none;
+  
+    background-color: transparent;
+  
+    color: #ffffff;
+  
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+  }
+  
+  .campo input::placeholder {
+    color: #8e7e7d;
+  
+    opacity: 1;
+  }
+  
+  
+  /* =========================================
+     GRUPOS
+  ========================================= */
+  
+  .grupo {
+    width: 100%;
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  /* =========================================
+     LABELS
+  ========================================= */
+  
+  label {
+    margin: 0 0 9px 0;
+  
+    color: #f1e7df;
+  
+    font-size: 20px;
+    font-weight: 400;
+  
+    line-height: 1;
+  }
+  
+  
+  /* =========================================
+     SELECT
+  ========================================= */
+  
+  .select-wrapper {
+    position: relative;
+  
+    width: 100%;
+    height: 59px;
+  }
+  
+  select {
+    width: 100%;
+    height: 100%;
+  
+    padding: 0 55px 0 15px;
+  
+    background-color: #210606;
+  
+    color: #8e7e7d;
+  
+    border: 1px solid #6e1715;
+    border-radius: 10px;
+  
+    outline: none;
+  
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+  
+    appearance: none;
+    -webkit-appearance: none;
+  
+    cursor: pointer;
+  }
+  
+  select:focus {
+    border-color: #8d211e;
+  }
+  
+  .select-wrapper i {
+    position: absolute;
+  
+    right: 38px;
+    top: 50%;
+  
+    transform: translateY(-50%);
+  
+    color: #ffffff;
+  
+    font-size: 19px;
+  
+    pointer-events: none;
+  }
+  
+  
+  /* =========================================
+     MENSAGEM
+  ========================================= */
+  
+  .mensagem-grupo {
+    margin-top: 0;
+  }
+  
+  
+  /* =========================================
+     TEXTAREA
+  ========================================= */
+  
+  .textarea-wrapper {
+    position: relative;
+  
+    width: 100%;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 140px;
+  
+    display: block;
+  
+    padding: 16px 15px;
+  
+    background-color: #210606;
+  
+    color: #ffffff;
+  
+    border: 1px solid #6e1715;
+    border-radius: 10px;
+  
+    outline: none;
+  
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+  
+    resize: none;
+  }
+  
+  textarea::placeholder {
+    color: #8e7e7d;
+  
+    opacity: 1;
+  }
+  
+  textarea:focus {
+    border-color: #8d211e;
+  }
+  
+  
+  /* =========================================
+     CONTADOR
+  ========================================= */
+  
+  .contador {
+    position: absolute;
+  
+    right: 9px;
+    bottom: 1px;
+  
+    color: #d01813;
+  
+    font-size: 20px;
+  
+    pointer-events: none;
+  }
+  
+  
+  /* =========================================
+     ÁREA DO BOTÃO
+  ========================================= */
+  
+  .btn-wrap {
+    grid-column: 1 / -1;
+  
+    display: flex;
+    justify-content: center;
+  
+    width: 100%;
+  
+    margin-top: 114px;
+  }
+  
+  
+  /* =========================================
+     BOTÃO ENVIAR
+  ========================================= */
+  
+  button[type="submit"] {
+    width: 587px;
+    height: 106px;
+  
+    padding: 0;
+  
+    background-color: #b9862f;
+  
+    background-image:
+      linear-gradient(
+        105deg,
+        #a17428 0%,
+        #b9862f 35%,
+        #b48a45 60%,
+        #b9862f 100%
+      );
+  
+    color: #ffffff;
+  
+    border: 3px solid #c29a52;
+    border-radius: 19px;
+  
+    font-family: "Orbitron", Arial, sans-serif;
+  
+    font-size: 34px;
+    font-weight: 400;
+  
+    cursor: pointer;
+  
+    transition: 0.2s ease;
+  
+    box-shadow:
+      inset 0 0 8px rgba(255, 255, 255, 0.12);
+  }
+  
+  button[type="submit"]:hover {
+    filter: brightness(1.08);
+  }
+  
+  button[type="submit"]:active {
+    transform: scale(0.99);
+  }
+  
+  
+  /* =========================================
+     RESPONSIVIDADE
+  ========================================= */
+  
+  @media (max-width: 900px) {
+  
+    .pagina {
+      width: 100%;
+    }
+  
+    header {
+      height: auto;
+      min-height: 150px;
+  
+      padding: 15px 20px;
+    }
+  
+    .logo-area {
+      width: 85px;
+    }
+  
+    .logo-area img {
+      width: 80px;
+    }
+  
+    .header-centro {
+      margin-right: 0;
+    }
+  
+    header h2 {
+      font-size: 18px;
+      white-space: normal;
+    }
+  
+    .back-btn {
+      width: 90%;
+      max-width: 400px;
+    }
+  
+    main {
+      padding: 35px 25px;
+    }
+  
+    form {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+  
+    .btn-wrap {
+      margin-top: 50px;
+    }
+  
+    button[type="submit"] {
+      width: 80%;
+      height: 85px;
+    }
+  }
+  
+  
+  @media (max-width: 600px) {
+  
+    header {
+      flex-direction: column;
+  
+      padding: 15px;
+    }
+  
+    .logo-area {
+      height: auto;
+    }
+  
+    .header-centro {
+      width: 100%;
+    }
+  
+    header h2 {
+      margin-top: 10px;
+      font-size: 15px;
+    }
+  
+    .back-btn {
+      width: 100%;
+    }
+  
+    h1 {
+      font-size: 30px;
+    }
+  
+    .campo {
+      height: 65px;
+    }
+  
+    .icone {
+      width: 60px;
+      min-width: 60px;
+    }
+  
+    label {
+      font-size: 17px;
+    }
+  
+    select,
+    textarea,
+    .campo input {
+      font-size: 16px;
+    }
+  
+    .contador {
+      font-size: 14px;
+    }
+  
+    button[type="submit"] {
+      width: 100%;
+      height: 75px;
+  
+      font-size: 26px;
+    }
+  }
+  
