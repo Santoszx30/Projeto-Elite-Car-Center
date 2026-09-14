@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #160000, #420000, #160000);
+  color: white;
+  min-height: 100vh;
+  margin: 0;
+  background-repeat: no-repeat;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(90deg, #180000, #500000, #180000);
+}
+header img {
+  width: 90px;
+}
+header h1 {
+  color: #d00000;
+  text-transform: uppercase;
+  margin: 10px;
+  font-size: 28px;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+nav a i {
+  margin-right: 5px;
+}
+nav a:hover {
+  color: #ff2020;
+}
+
+/* MAIN */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 50px 20px;
+  flex-wrap: wrap;
+}
+
+/* MINHA CONTA (card esquerdo, igual "Faça Login") */
+.cadastro {
+  flex: 1;
+  min-width: 300px;
+  max-width: 550px;
+  padding: 30px;
+  background: linear-gradient(135deg, #260000, #450000);
+  border-radius: 15px;
+  border: 1px solid #8b0000;
+}
+.cadastro h2 {
+  font-size: 26px;
+  margin-bottom: 5px;
+  color: gold;
+}
+.cadastro h2 i {
+  margin-right: 8px;
+}
+.subtitulo {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+.campo {
+  margin-bottom: 18px;
+}
+.campo > i {
+  color: gold;
+  margin-right: 6px;
+}
+label {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+input {
+  width: 100%;
+  padding: 12px;
+  background: #1d0000;
+  border: 1px solid #8b0000;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+}
+input::placeholder {
+  color: #a37a7a;
+}
+input:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+}
+.botaoCadastrar {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #a87920, #d4af37);
+  color: #111;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.botaoCadastrar i {
+  margin-right: 5px;
+}
+.botaoCadastrar:hover {
+  background: linear-gradient(90deg, #d4af37, #e2c45c);
+  transform: scale(1.02);
+}
+
+/* RESUMO (card direito, igual "Login por:") */
+.resumo {
+  flex: 1;
+  min-width: 260px;
+  max-width: 380px;
+  padding: 25px;
+  background: linear-gradient(135deg, #2a0000, #3a0000);
+  border-radius: 15px;
+  border: 1px solid #8b0000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+}
+.resumo > h2 {
+  color: white;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.resumo > h2 i {
+  color: gold;
+  margin-right: 8px;
+}
+
+/* cada linha de dado vira uma "caixinha" igual aos botões Google/Apple */
+.resumo p {
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  background: #1d0000;
+  border: 1px solid #8b0000;
+  border-radius: 10px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.resumo p i {
+  color: gold;
+  text-shadow: 0 0 6px rgba(212, 175, 55, 0.5);
+}
+.resumo p strong {
+  color: gold;
+  margin-left: 4px;
+}
+
+/* destaque no nível VIP, igual ao selo dourado do topo */
+.resumo p:first-of-type {
+  background: linear-gradient(135deg, #3a2400, #1d0000);
+  border: 1px solid #d4af37;
+}
+.resumo p:first-of-type i {
+  font-size: 22px;
+}
+.resumo p:first-of-type strong {
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+}
+
+/* FOOTER */
+footer {
+  background: linear-gradient(90deg, #180000, #500000, #180000);
+  padding: 30px;
+  text-align: center;
+  border-top: 2px solid #8b0000;
+}
+footer h3 {
+  color: #d00000;
+  margin-bottom: 10px;
+}
+footer p {
+  color: #ccc;
+  margin-top: 5px;
+}
+footer button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: linear-gradient(90deg, #a87920, #d4af37);
+  color: #111;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+footer button i {
+  margin-right: 6px;
+}
+footer button:hover {
+  background: linear-gradient(90deg, #d4af37, #e2c45c);
+  transform: scale(1.05);
+}
+.redes a {
+  color: gold;
+  font-size: 22px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.redes a:hover {
+  color: #ff2020;
+}
+
+/* RESPONSIVO */
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cadastro, .resumo {
+    width: 100%;
+    max-width: 90%;
+  }
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

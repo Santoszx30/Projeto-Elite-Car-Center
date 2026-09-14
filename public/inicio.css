@@ -8,9 +8,9 @@
     --cream: #f3ece2;
     --muted: #b9a7a7;
   }
-  
+
   *{margin:0; padding:0; box-sizing:border-box;}
-  
+
   body{
     background:
       radial-gradient(ellipse 900px 500px at 50% -10%, #4a1010 0%, transparent 60%),
@@ -19,47 +19,61 @@
     font-family: 'Poppins', 'Segoe UI', sans-serif;
     min-height: 100vh;
   }
-  
-  /* Header */
+
+  /* =========================================
+     HEADER
+  ========================================= */
+
   .site-header{
-    padding: 22px 44px 0;
+    background: var(--bg-header);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 20px 44px 0;
   }
-  
+
   .header-top{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap: 24px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 18px;
   }
-  
+
   .logo-shield{
-    width: 166px;
-    height: 172px;
+    width: 84px;
+    height: 84px;
     object-fit: contain;
-    position: absolute;
-    left: 0;
+    flex-shrink: 0;
   }
-  
+
+  /* espaçador do mesmo tamanho da logo do lado direito,
+     para o título ficar centralizado de verdade no cabeçalho
+     (mesma técnica usada nas outras páginas do site) */
+  .header-top::after{
+    content: "";
+    width: 84px;
+    flex-shrink: 0;
+  }
+
   .brand-title{
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 800;
-    letter-spacing: 4px;
-    font-size: 1.9rem;
+    flex: 1;
+
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-size: 1.75rem;
     color: var(--red-bright);
-    text-shadow: 0 0 20px rgba(232,38,44,0.45);
+    text-transform: uppercase;
     text-align: center;
   }
-  
+
   nav{
     display:flex;
     justify-content:center;
     gap: 34px;
     padding: 18px 0 14px;
     flex-wrap: wrap;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    border-top: 1px solid rgba(255,255,255,0.06);
   }
-  
+
   nav a{
     color: var(--red-bright);
     text-decoration:none;
@@ -71,33 +85,36 @@
     padding-bottom: 8px;
     transition: opacity .2s ease;
   }
-  
+
   nav a svg{ width:19px; height:19px; fill: var(--cream); }
-  
+
   nav a:hover{ opacity: 0.75; }
-  
+
   nav a.active{
     border-bottom: 2px solid var(--red-bright);
   }
-  
-  /* Hero */
+
+  /* =========================================
+     HERO
+  ========================================= */
+
   main{
     padding: 56px 48px 20px;
   }
-  
+
   .hero{
     display:flex;
     gap: 46px;
     align-items:center;
     flex-wrap: wrap;
   }
-  
+
   .hero-copy{
     flex: 1 1 400px;
     min-width: 320px;
   }
-  
-  .hero-copy h1{
+
+  .hero-copy h2{
     font-family: 'Orbitron', sans-serif;
     font-weight: 700;
     font-size: 2.6rem;
@@ -105,11 +122,11 @@
     letter-spacing: 1px;
     color: var(--cream);
   }
-  
-  .hero-copy h1 .accent{
+
+  .hero-copy h2 .accent{
     color: var(--gold);
   }
-  
+
   .hero-copy p{
     margin-top: 24px;
     font-style: italic;
@@ -119,7 +136,7 @@
     color: var(--muted);
     max-width: 400px;
   }
-  
+
   .btn-questionario{
     margin-top: 34px;
     display:inline-block;
@@ -134,19 +151,19 @@
     cursor: pointer;
     transition: background .2s ease, color .2s ease;
   }
-  
+
   .btn-questionario:hover{
     background: var(--gold);
     color: #200606;
   }
-  
+
   .hero-visual-wrap{
     flex: 1 1 440px;
     min-width: 320px;
     position: relative;
     margin-bottom: 50px;
   }
-  
+
   .hero-visual{
     background: linear-gradient(180deg, #331010, #230707);
     border-radius: 8px;
@@ -156,13 +173,13 @@
     padding: 40px;
     min-height: 340px;
   }
-  
+
   .hero-visual img{
     max-width: 100%;
     height: auto;
     filter: drop-shadow(0 20px 30px rgba(0,0,0,0.6));
   }
-  
+
   .black-badge{
     position:absolute;
     bottom: -60px;
@@ -179,55 +196,132 @@
     align-items:center;
     gap: 10px;
   }
-  
+
   .black-badge svg{ width: 18px; height:18px; fill: var(--gold); }
-  
-  /* Footer */
+
+  /* =========================================
+     FOOTER
+     (mesmas informações e estilo usados nas
+     demais páginas do site)
+  ========================================= */
+
   footer{
     margin-top: 90px;
-    padding: 34px 48px 40px;
-    display:flex;
-    justify-content: space-between;
+    padding: 30px 44px 34px;
+
+    display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 30px;
+
+    background: var(--bg-header);
     border-top: 1px solid rgba(255,255,255,0.08);
   }
-  
-  .footer-col h3{
-    font-size: 1.05rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: var(--cream);
+
+  .atendimento{
+    flex: 1 1 220px;
   }
-  
-  .footer-col p{
-    color: var(--muted);
-    font-size: 0.92rem;
+
+  .atendimento h3{
+    color: var(--red);
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .atendimento h3 i{
+    color: var(--gold);
+    margin-right: 6px;
+  }
+
+  .atendimento p{
+    color: var(--cream);
+    font-size: 0.85rem;
     line-height: 1.5;
-    max-width: 220px;
   }
-  
-  .footer-col .sac{
-    margin-top: 32px;
+
+  .atendimento p i{
+    color: var(--gold);
+    margin-right: 5px;
+  }
+
+  .atendimento button{
+    margin-top: 10px;
+    padding: 8px 16px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: var(--red);
     color: var(--cream);
-    font-size: 0.95rem;
+
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: background .2s ease;
   }
-  
-  .footer-social-col{
+
+  .atendimento button i{
+    margin-right: 5px;
+  }
+
+  .atendimento button:hover{
+    background: var(--red-bright);
+  }
+
+  .sac{
+    flex: 1 1 200px;
+  }
+
+  .sac p{
+    color: var(--cream);
+    font-size: 0.85rem;
+  }
+
+  .sac i{
+    color: var(--gold);
+    margin-right: 6px;
+  }
+
+  .copyright{
+    flex: 1 1 260px;
+
+    color: var(--muted);
+    font-size: 0.78rem;
+    align-self: center;
+  }
+
+  .copyright i{
+    color: var(--gold);
+    margin-right: 5px;
+  }
+
+  .redes{
+    flex: 1 1 200px;
     text-align: right;
   }
-  
+
+  .redes h3{
+    color: var(--cream);
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+
+  .redes h3 i{
+    color: var(--gold);
+    margin-right: 5px;
+  }
+
   .footer-social{
     display:flex;
     gap: 12px;
-    margin-top: 12px;
     justify-content: flex-end;
   }
-  
+
   .footer-social a{
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     border-radius: 6px;
     background: var(--red);
     display:flex;
@@ -235,20 +329,88 @@
     justify-content:center;
     color: var(--cream);
     text-decoration:none;
+    transition: background .2s ease, transform .2s ease;
   }
-  
-  .footer-social a svg{ width: 20px; height: 20px; fill: var(--cream); }
-  
+
+  .footer-social a svg{ width: 18px; height: 18px; fill: var(--cream); }
+
   .footer-social a:nth-child(3){ background: #1a1a1a; }
-  
+
+  .footer-social a:hover{
+    background: var(--red-bright);
+    transform: translateY(-2px);
+  }
+
+  /* =========================================
+     RESPONSIVIDADE - TABLET
+  ========================================= */
+
+  @media (max-width: 900px){
+
+    .site-header{ padding: 18px 24px 0; }
+
+    main{ padding: 40px 24px; }
+
+    footer{ padding: 28px 24px 30px; }
+
+    .hero{ gap: 32px; }
+  }
+
+  /* =========================================
+     RESPONSIVIDADE - CELULAR
+  ========================================= */
+
   @media (max-width: 760px){
-    .header-top{ flex-direction: column; }
-    .logo-shield{ position: static; margin-bottom: 10px; }
-    .brand-title{ font-size: 1.25rem; letter-spacing: 2px; }
-    nav{ gap: 16px; font-size: 0.85rem;}
-    .hero-copy h1{ font-size: 1.9rem; }
-    main{ padding: 34px 22px; }
-    footer{ padding: 30px 22px; }
-    .footer-social-col{ text-align: left; }
+
+    .header-top{
+      flex-direction: column;
+      padding-bottom: 12px;
+    }
+
+    .header-top::after{
+      display: none;
+    }
+
+    .logo-shield{
+      width: 72px;
+      height: 72px;
+    }
+
+    .brand-title{
+      font-size: 1.15rem;
+      letter-spacing: 1px;
+    }
+
+    nav{ gap: 16px; font-size: 0.85rem; padding: 14px 0 12px; }
+
+    .hero-copy h2{ font-size: 1.9rem; }
+
+    main{ padding: 34px 20px; }
+
+    .hero{ gap: 30px; }
+
+    .hero-visual{ padding: 24px; min-height: 240px; }
+
+    .black-badge{
+      position: static;
+      display: inline-flex;
+      margin-top: 14px;
+    }
+
+    .hero-visual-wrap{ margin-bottom: 0; }
+
+    footer{
+      flex-direction: column;
+      gap: 22px;
+      padding: 28px 20px 32px;
+    }
+
+    .copyright{ order: 3; }
+
+    .redes{
+      text-align: left;
+      order: 4;
+    }
+
     .footer-social{ justify-content: flex-start; }
   }

@@ -1,0 +1,1411 @@
+/* =====================================================
+   CONFIGURAÇÕES GERAIS
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            #570000 0%,
+            #2b0000 35%,
+            #160000 70%,
+            #0d0000 100%
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    width: 100%;
+
+    text-align: center;
+
+    padding: 0 20px 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #1a0000,
+            #4a0000,
+            #1a0000
+        );
+
+    border-bottom:
+        1px solid rgba(255, 0, 0, 0.12);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding-top: 0;
+
+    margin-bottom: 8px;
+}
+
+.logo img {
+    width: 95px;
+
+    height: 75px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 auto;
+
+    filter:
+        drop-shadow(
+            0 5px 12px rgba(0, 0, 0, 0.7)
+        );
+
+    transition: 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+
+    filter:
+        drop-shadow(
+            0 7px 18px rgba(212, 175, 55, 0.25)
+        );
+}
+
+
+/* =====================================================
+   TÍTULO HEADER
+===================================================== */
+
+.titulo {
+    width: 100%;
+
+    text-align: center;
+}
+
+.titulo h1 {
+    color: #e31b13;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-size: clamp(24px, 3vw, 34px);
+
+    margin-bottom: 20px;
+
+    font-weight: bold;
+
+    text-shadow:
+        0 0 15px rgba(227, 27, 19, 0.15);
+}
+
+
+/* =====================================================
+   MENU
+===================================================== */
+
+nav {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 28px;
+
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #f1f1f1;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    position: relative;
+
+    padding-bottom: 5px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    transition: 0.3s ease;
+}
+
+
+/* =====================================================
+   ÍCONES DO MENU
+===================================================== */
+
+nav a i {
+    color: #ffffff;
+
+    font-size: 15px;
+
+    margin-right: 7px;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff3930;
+}
+
+nav a:hover i {
+    color: #ff3930;
+
+    transform:
+        translateY(-2px)
+        scale(1.05);
+}
+
+
+/* =====================================================
+   LINHA DO MENU
+===================================================== */
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+
+    height: 2px;
+
+    left: 50%;
+
+    bottom: 0;
+
+    transform: translateX(-50%);
+
+    background: #e31b13;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+main {
+    flex: 1;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+
+/* =====================================================
+   ÁREA DE CADASTRO
+===================================================== */
+
+.cadastro {
+    width: 100%;
+
+    max-width: 1060px;
+
+    padding: 40px 42px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(55, 0, 0, 0.9),
+            rgba(80, 0, 0, 0.65)
+        );
+
+    border:
+        1px solid rgba(180, 0, 0, 0.8);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =====================================================
+   TÍTULO DO CADASTRO
+===================================================== */
+
+.cadastro h2 {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #f5f5f5;
+
+    font-size: 36px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 6px;
+}
+
+.cadastro h2 i {
+    color: #d4af37;
+
+    font-size: 28px;
+
+    transition: 0.3s ease;
+}
+
+.cadastro h2:hover i {
+    transform: scale(1.1);
+
+    text-shadow:
+        0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+
+/* =====================================================
+   SUBTÍTULO
+===================================================== */
+
+.subtitulo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #d0d0d0;
+
+    font-size: 17px;
+
+    font-style: italic;
+
+    margin-top: 4px;
+
+    margin-bottom: 28px;
+
+    line-height: 1.4;
+}
+
+.subtitulo i {
+    color: #d4af37;
+
+    font-size: 14px;
+
+    font-style: normal;
+}
+
+
+/* =====================================================
+   FORMULÁRIO
+===================================================== */
+
+form {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 30px;
+
+    row-gap: 24px;
+}
+
+
+/* =====================================================
+   CAMPOS
+===================================================== */
+
+.campo {
+    width: 100%;
+
+    margin: 0;
+}
+
+.campo label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 9px;
+
+    color: #e5e5e5;
+
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   ÍCONES DOS CAMPOS
+===================================================== */
+
+.campo label i {
+    width: 20px;
+
+    text-align: center;
+
+    color: #d4af37;
+
+    font-size: 15px;
+
+    transition: 0.3s ease;
+}
+
+.campo:focus-within label i {
+    color: #ff3930;
+
+    transform: scale(1.1);
+
+    text-shadow:
+        0 0 8px rgba(255, 57, 48, 0.35);
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.campo input {
+    width: 100%;
+
+    height: 53px;
+
+    padding: 0 15px;
+
+    display: block;
+
+    background:
+        rgba(20, 0, 0, 0.75);
+
+    border:
+        1px solid #8d0000;
+
+    border-radius: 11px;
+
+    color: white;
+
+    font-size: 17px;
+
+    outline: none;
+
+    transition: 0.3s ease;
+
+    margin: 0;
+}
+
+.campo input::placeholder {
+    color: #777;
+}
+
+.campo input:focus {
+    border-color: #d4af37;
+
+    box-shadow:
+        0 0 0 3px rgba(212, 175, 55, 0.1),
+        0 0 15px rgba(212, 175, 55, 0.15);
+}
+
+.campo input:hover {
+    border-color: #b00000;
+}
+
+
+/* =====================================================
+   BOTÃO CRIAR CONTA
+===================================================== */
+
+.botaoCadastrar {
+    width: 55%;
+
+    min-width: 280px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    margin: 30px auto 0;
+
+    padding: 15px 20px;
+
+    border:
+        1px solid #d4af37;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #a87920,
+            #d4af37
+        );
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+
+    transition: 0.3s ease;
+}
+
+
+/* =====================================================
+   ÍCONE DO BOTÃO
+===================================================== */
+
+.botaoCadastrar i {
+    font-size: 17px;
+
+    transition: 0.3s ease;
+}
+
+.botaoCadastrar:hover {
+    background:
+        linear-gradient(
+            90deg,
+            #c08d28,
+            #e4c64d
+        );
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 14px 30px
+        rgba(212, 175, 55, 0.22);
+}
+
+.botaoCadastrar:hover i {
+    transform:
+        translateX(4px)
+        scale(1.05);
+}
+
+.botaoCadastrar:active {
+    transform:
+        translateY(1px)
+        scale(0.98);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    width: 100%;
+
+    min-height: 180px;
+
+    padding: 35px 7%;
+
+    display: grid;
+
+    grid-template-columns:
+        200px
+        1fr
+        200px;
+
+    align-items: center;
+
+    gap: 35px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #080000,
+            #130000,
+            #080000
+        );
+
+    border-top:
+        1px solid rgba(255, 0, 0, 0.1);
+
+    box-shadow:
+        0 -10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =====================================================
+   ATENDIMENTO
+===================================================== */
+
+.atendimento {
+    width: 100%;
+}
+
+.atendimento h3 {
+    color: #e31b13;
+
+    margin-bottom: 8px;
+
+    font-size: 17px;
+
+    letter-spacing: 0.5px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.atendimento h3 i {
+    color: #d4af37;
+
+    font-size: 16px;
+}
+
+.atendimento p {
+    color: #d0d0d0;
+
+    margin-bottom: 10px;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 7px;
+}
+
+.atendimento p i {
+    color: #d4af37;
+
+    font-size: 14px;
+
+    margin-top: 2px;
+}
+
+
+/* =====================================================
+   BOTÃO WHATSAPP
+===================================================== */
+
+.atendimento button {
+    width: 165px;
+
+    height: 36px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #a00000,
+            #d00000
+        );
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    transition: 0.3s ease;
+}
+
+.atendimento button i {
+    font-size: 15px;
+
+    transition: 0.3s ease;
+}
+
+.atendimento button:hover {
+    background:
+        linear-gradient(
+            90deg,
+            #c00000,
+            #ed0000
+        );
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(208, 0, 0, 0.2);
+}
+
+.atendimento button:hover i {
+    transform: scale(1.15);
+}
+
+.atendimento button:active {
+    transform: scale(0.97);
+}
+
+
+/* =====================================================
+   SAC
+===================================================== */
+
+.sac {
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    text-align: center;
+
+    gap: 10px;
+}
+
+.sac p {
+    color: #ddd;
+
+    font-size: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+}
+
+.sac p i {
+    color: #d4af37;
+
+    font-size: 14px;
+}
+
+.sac .copyright {
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   REDES SOCIAIS
+===================================================== */
+
+.redes {
+    width: 100%;
+
+    text-align: right;
+}
+
+.redes p {
+    color: #e5e5e5;
+
+    margin-bottom: 8px;
+
+    font-size: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 7px;
+}
+
+.redes p i {
+    color: #d4af37;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   BOTÕES DAS REDES
+===================================================== */
+
+.redes a {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 36px;
+
+    height: 36px;
+
+    margin-left: 5px;
+
+    border-radius: 7px;
+
+    background: #a00000;
+
+    color: white;
+
+    font-size: 17px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.redes a i {
+    transition: 0.3s ease;
+}
+
+.redes a:hover {
+    background: #e00000;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 18px
+        rgba(208, 0, 0, 0.2);
+}
+
+.redes a:hover i {
+    transform: scale(1.15);
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE - TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    header {
+        padding-bottom: 18px;
+    }
+
+    .logo img {
+        width: 85px;
+
+        height: 68px;
+    }
+
+    .titulo h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    main {
+        padding: 35px 20px;
+    }
+
+    .cadastro {
+        max-width: 750px;
+
+        padding: 32px 30px;
+    }
+
+    form {
+        column-gap: 22px;
+
+        row-gap: 22px;
+    }
+
+    .campo label {
+        margin-bottom: 8px;
+    }
+
+
+    footer {
+        grid-template-columns:
+            1fr
+            1fr;
+
+        min-height: 190px;
+
+        padding: 25px 35px;
+
+        gap: 25px;
+    }
+
+    .sac {
+        grid-column: 1 / -1;
+
+        height: auto;
+
+        gap: 12px;
+    }
+
+    .atendimento {
+        text-align: left;
+    }
+
+    .redes {
+        text-align: right;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE - CELULAR
+===================================================== */
+
+@media (max-width: 700px) {
+
+    header {
+        min-height: auto;
+
+        padding:
+            10px 15px
+            18px;
+    }
+
+
+    /* LOGO */
+
+    .logo {
+        width: 100%;
+
+        padding: 0;
+
+        margin-bottom: 5px;
+    }
+
+    .logo img {
+        width: 70px;
+
+        height: 58px;
+
+        margin: auto;
+    }
+
+
+    /* TÍTULO */
+
+    .titulo {
+        padding: 0;
+    }
+
+    .titulo h1 {
+        font-size: 18px;
+
+        letter-spacing: 1px;
+
+        line-height: 1.2;
+
+        margin-bottom: 15px;
+    }
+
+
+    /* MENU */
+
+    nav {
+        position: static;
+
+        margin-top: 12px;
+
+        gap: 11px 13px;
+
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+
+        padding-bottom: 4px;
+    }
+
+    nav a i {
+        font-size: 12px;
+
+        margin-right: 4px;
+    }
+
+
+    /* MAIN */
+
+    main {
+        padding:
+            28px 13px;
+    }
+
+
+    /* CADASTRO */
+
+    .cadastro {
+        width: 100%;
+
+        padding:
+            27px 18px;
+
+        border-radius: 15px;
+    }
+
+
+    /* TÍTULO */
+
+    .cadastro h2 {
+        font-size: 29px;
+
+        gap: 8px;
+    }
+
+    .cadastro h2 i {
+        font-size: 23px;
+    }
+
+
+    /* SUBTÍTULO */
+
+    .subtitulo {
+        font-size: 14px;
+
+        margin-top: 4px;
+
+        margin-bottom: 24px;
+
+        line-height: 1.4;
+    }
+
+    .subtitulo i {
+        font-size: 13px;
+    }
+
+
+    /* FORMULÁRIO */
+
+    form {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        column-gap: 0;
+
+        row-gap: 22px;
+
+        width: 100%;
+    }
+
+
+    /* CAMPOS */
+
+    .campo {
+        width: 100%;
+
+        margin: 0;
+    }
+
+    .campo label {
+        font-size: 15px;
+
+        margin-bottom: 8px;
+
+        line-height: 1.3;
+
+        gap: 7px;
+    }
+
+    .campo label i {
+        width: 18px;
+
+        font-size: 14px;
+    }
+
+    .campo input {
+        width: 100%;
+
+        height: 50px;
+
+        margin: 0;
+
+        padding:
+            0 14px;
+
+        font-size: 16px;
+
+        border-radius: 10px;
+    }
+
+
+    /* BOTÃO */
+
+    .botaoCadastrar {
+        width: 100%;
+
+        min-width: 0;
+
+        margin-top: 27px;
+
+        padding:
+            14px 18px;
+
+        font-size: 18px;
+    }
+
+    .botaoCadastrar i {
+        font-size: 16px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        width: 100%;
+
+        min-height: auto;
+
+        padding:
+            28px 20px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 24px;
+
+        text-align: center;
+    }
+
+
+    /* ATENDIMENTO */
+
+    .atendimento {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .atendimento h3 {
+        justify-content: center;
+
+        font-size: 17px;
+
+        margin-bottom: 7px;
+    }
+
+    .atendimento p {
+        justify-content: center;
+
+        font-size: 13px;
+
+        margin-bottom: 10px;
+
+        line-height: 1.4;
+    }
+
+    .atendimento button {
+        width: 165px;
+
+        height: 36px;
+    }
+
+
+    /* SAC */
+
+    .sac {
+        width: 100%;
+
+        height: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+    .sac p {
+        font-size: 13px;
+    }
+
+    .sac .copyright {
+        font-size: 12px;
+
+        line-height: 1.4;
+    }
+
+
+    /* REDES */
+
+    .redes {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .redes p {
+        font-size: 14px;
+
+        margin-bottom: 8px;
+
+        justify-content: center;
+    }
+
+    .redes a {
+        width: 35px;
+
+        height: 35px;
+
+        margin:
+            0 3px;
+
+        font-size: 17px;
+    }
+
+}
+
+
+/* =====================================================
+   CELULARES MUITO PEQUENOS
+===================================================== */
+
+@media (max-width: 400px) {
+
+    header {
+        padding:
+            9px 12px
+            15px;
+    }
+
+    .logo img {
+        width: 62px;
+
+        height: 52px;
+    }
+
+    .titulo h1 {
+        font-size: 16px;
+
+        letter-spacing: 0.8px;
+    }
+
+    nav {
+        gap:
+            8px 10px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    nav a i {
+        font-size: 10px;
+
+        margin-right: 3px;
+    }
+
+
+    /* MAIN */
+
+    main {
+        padding:
+            22px 10px;
+    }
+
+
+    /* CADASTRO */
+
+    .cadastro {
+        padding:
+            24px 14px;
+    }
+
+    .cadastro h2 {
+        font-size: 26px;
+
+        gap: 7px;
+    }
+
+    .cadastro h2 i {
+        font-size: 21px;
+    }
+
+
+    /* SUBTÍTULO */
+
+    .subtitulo {
+        font-size: 13px;
+
+        margin-bottom: 22px;
+    }
+
+    .subtitulo i {
+        font-size: 12px;
+    }
+
+
+    /* CAMPOS */
+
+    form {
+        row-gap: 20px;
+    }
+
+    .campo label {
+        font-size: 14px;
+
+        margin-bottom: 7px;
+
+        gap: 6px;
+    }
+
+    .campo label i {
+        font-size: 13px;
+
+        width: 17px;
+    }
+
+    .campo input {
+        height: 48px;
+
+        font-size: 15px;
+
+        padding:
+            0 13px;
+    }
+
+
+    /* BOTÃO */
+
+    .botaoCadastrar {
+        font-size: 17px;
+
+        margin-top: 24px;
+
+        padding:
+            13px 16px;
+    }
+
+    .botaoCadastrar i {
+        font-size: 15px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding:
+            25px 15px;
+
+        gap: 20px;
+    }
+
+    .atendimento h3 {
+        font-size: 16px;
+    }
+
+    .atendimento p {
+        font-size: 12px;
+    }
+
+    .atendimento button {
+        width: 155px;
+    }
+
+    .sac p {
+        font-size: 12px;
+    }
+
+    .sac .copyright {
+        font-size: 11px;
+    }
+
+    .redes p {
+        font-size: 13px;
+    }
+
+    .redes a {
+        width: 33px;
+
+        height: 33px;
+
+        font-size: 16px;
+    }
+
+}
