@@ -1,0 +1,983 @@
+/* =====================================
+   RESET
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================
+   BODY
+===================================== */
+
+body {
+
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    color: white;
+
+    background:
+        #240000;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+header {
+
+    width: 100%;
+
+    height: 126px;
+
+    position: relative;
+
+    background:
+        #210000;
+
+    border-bottom:
+        1px solid #3d0000;
+
+}
+
+
+/* =====================================
+   LOGO
+===================================== */
+
+.logo {
+
+    position: absolute;
+
+    top: 5px;
+
+    left: 30px;
+
+}
+
+
+.logo img {
+
+    width: 120px;
+
+    height: 105px;
+
+    object-fit: contain;
+
+}
+
+
+/* =====================================
+   TÍTULO
+===================================== */
+
+.titulo {
+
+    position: absolute;
+
+    top: 45px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+}
+
+
+.titulo h1 {
+
+    color: #df271e;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    white-space: nowrap;
+
+}
+
+
+/* =====================================
+   MENU
+===================================== */
+
+nav {
+
+    position: absolute;
+
+    bottom: 18px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 23px;
+
+}
+
+
+nav a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+
+    padding-bottom: 5px;
+
+    border-bottom:
+        2px solid transparent;
+
+    transition: 0.2s ease;
+
+}
+
+
+nav a i {
+
+    font-size: 13px;
+
+}
+
+
+nav a:hover {
+
+    color: #df271e;
+
+}
+
+
+nav a.ativo {
+
+    color: #df271e;
+
+    border-bottom:
+        2px solid #df271e;
+
+}
+
+
+/* =====================================
+   CONTEÚDO PRINCIPAL
+===================================== */
+
+main {
+
+    width: 100%;
+
+    min-height: 638px;
+
+    padding:
+        39px 4.5% 45px;
+
+    background:
+        #260000;
+
+}
+
+
+/* =====================================
+   ÁREA DE AGENDAMENTO
+===================================== */
+
+.agendamento {
+
+    width: 100%;
+
+}
+
+
+/* =====================================
+   CABEÇALHO
+===================================== */
+
+.cabecalho {
+
+    margin-bottom: 27px;
+
+}
+
+
+.cabecalho h2 {
+
+    font-size: 31px;
+
+    font-weight: normal;
+
+    letter-spacing: 1px;
+
+    color: white;
+
+}
+
+
+.cabecalho p {
+
+    margin-top: 1px;
+
+    color: #999;
+
+    font-size: 17px;
+
+    font-style: italic;
+
+}
+
+
+.cabecalho p span {
+
+    color: #df271e;
+
+}
+
+
+.cabecalho p i {
+
+    color: #df271e;
+
+    font-size: 19px;
+
+    margin-left: 3px;
+
+}
+
+
+/* =====================================
+   VEÍCULOS
+===================================== */
+
+.veiculos {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+
+    width: 100%;
+
+}
+
+
+/* =====================================
+   CARD
+===================================== */
+
+.veiculo {
+
+    height: auto;
+
+    background:
+        #500000;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    border:
+        1px solid transparent;
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.veiculo:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        #9c0000;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.35);
+
+}
+
+
+/* =====================================
+   IMAGEM
+===================================== */
+
+.imagem {
+
+    width: 100%;
+
+    height: 160px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        #570000;
+
+}
+
+
+.imagem img {
+
+    width: 92%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.veiculo:hover .imagem img {
+
+    transform:
+        scale(1.04);
+
+}
+
+
+/* =====================================
+   DADOS DO CARRO
+===================================== */
+
+.dados {
+
+    height: 97px;
+
+    padding:
+        13px 11px;
+
+    background:
+        #460000;
+
+}
+
+
+.dados h3 {
+
+    color: #df1515;
+
+    font-size: 12px;
+
+    line-height: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.3px;
+
+}
+
+
+.dados p {
+
+    margin-top: 4px;
+
+    color: white;
+
+    font-size: 13px;
+
+}
+
+
+.dados span {
+
+    color: white;
+
+    font-size: 13px;
+
+}
+
+
+.dados b {
+
+    color: #d00000;
+
+    font-weight: normal;
+
+}
+
+
+/* =====================================
+   BOTÃO / MENSAGEM
+===================================== */
+
+.botao-selecionar {
+
+    display: block;
+
+    width: 405px;
+
+    height: 60px;
+
+    margin:
+        93px auto 0;
+
+    background:
+        transparent;
+
+    border:
+        1px solid #bd0000;
+
+    border-radius:
+        7px;
+
+    color:
+        #e00000;
+
+    font-size:
+        15px;
+
+    cursor:
+        pointer;
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.botao-selecionar:hover {
+
+    background:
+        rgba(180, 0, 0, 0.08);
+
+    border-color:
+        #e00000;
+
+    box-shadow:
+        0 0 12px rgba(220, 0, 0, 0.15);
+
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 157px;
+
+    background:
+        #170000;
+
+    border-top:
+        1px solid #310000;
+
+}
+
+
+/* =====================================
+   ATENDIMENTO
+===================================== */
+
+.atendimento {
+
+    position: absolute;
+
+    top: 25px;
+
+    left: 3.6%;
+
+}
+
+
+.atendimento h3 {
+
+    color: #df1515;
+
+    font-size: 14px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.atendimento h3 i {
+
+    color: #d4af37;
+
+    margin-right: 5px;
+
+}
+
+
+.atendimento p {
+
+    color: white;
+
+    font-size: 11px;
+
+    line-height: 17px;
+
+}
+
+
+.atendimento p i {
+
+    color: #d4af37;
+
+    margin-right: 4px;
+
+}
+
+
+.atendimento button {
+
+    width: 130px;
+
+    height: 29px;
+
+    margin-top: 7px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background:
+        #c00000;
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.atendimento button:hover {
+
+    background:
+        #e00000;
+
+}
+
+
+/* =====================================
+   SAC
+===================================== */
+
+.sac {
+
+    position: absolute;
+
+    top: 27px;
+
+    left: 46.5%;
+
+}
+
+
+.sac p {
+
+    color: white;
+
+    font-size: 11px;
+
+}
+
+
+.sac i {
+
+    color: #d4af37;
+
+    margin-right: 5px;
+
+}
+
+
+/* =====================================
+   COPYRIGHT
+===================================== */
+
+.copyright {
+
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 43%;
+
+    transform:
+        translateX(-50%);
+
+    color: #888;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+
+}
+
+
+.copyright i {
+
+    color: #d4af37;
+
+    margin-right: 4px;
+
+}
+
+
+/* =====================================
+   REDES SOCIAIS
+===================================== */
+
+.redes {
+
+    position: absolute;
+
+    right: 3.5%;
+
+    top: 42px;
+
+}
+
+
+.redes h3 {
+
+    color: white;
+
+    font-size: 11px;
+
+    font-weight: normal;
+
+    margin-bottom: 8px;
+
+}
+
+
+.redes h3 i {
+
+    color: #d4af37;
+
+    margin-right: 4px;
+
+}
+
+
+.icones {
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+
+.icones a {
+
+    width: 30px;
+
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 5px;
+
+    background:
+        #c00000;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    transition:
+        0.2s ease;
+
+}
+
+
+.icones a:hover {
+
+    background:
+        #e00000;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =====================================
+   RESPONSIVIDADE
+===================================== */
+
+@media (max-width: 1100px) {
+
+    nav {
+
+        gap: 12px;
+
+    }
+
+    nav a {
+
+        font-size: 12px;
+
+    }
+
+    .titulo h1 {
+
+        font-size: 23px;
+
+    }
+
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 850px) {
+
+    header {
+
+        height: 160px;
+
+    }
+
+    .titulo {
+
+        top: 40px;
+
+    }
+
+    nav {
+
+        bottom: 12px;
+
+        width: 90%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 8px 15px;
+
+    }
+
+    .veiculos {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+    main {
+
+        min-height: 800px;
+
+    }
+
+}
+
+
+/* =====================================
+   CELULAR
+===================================== */
+
+@media (max-width: 600px) {
+
+    header {
+
+        height: auto;
+
+        min-height: 300px;
+
+        padding-bottom: 15px;
+
+    }
+
+
+    .logo {
+
+        position: static;
+
+        transform: none;
+
+        margin-top: 10px;
+
+    }
+
+
+    .titulo {
+
+        position: static;
+
+        transform: none;
+
+        margin-top: 10px;
+
+    }
+
+
+    .titulo h1 {
+
+        font-size: 18px;
+
+        text-align: center;
+
+    }
+
+
+    nav {
+
+        position: static;
+
+        transform: none;
+
+        width: 100%;
+
+        margin-top: 20px;
+
+        flex-direction: column;
+
+        gap: 0;
+
+    }
+
+
+    nav a {
+
+        width: 100%;
+
+        justify-content: center;
+
+        padding: 10px;
+
+    }
+
+
+    main {
+
+        padding:
+            30px 15px 50px;
+
+    }
+
+
+    .cabecalho h2 {
+
+        font-size: 27px;
+
+    }
+
+
+    .cabecalho p {
+
+        font-size: 14px;
+
+    }
+
+
+    .veiculos {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .veiculo {
+
+        height: auto;
+
+    }
+
+
+    .imagem {
+
+        height: 125px;
+
+    }
+
+
+    .botao-selecionar {
+
+        width: 100%;
+
+        margin-top: 50px;
+
+    }
+
+
+    footer {
+
+        height: auto;
+
+        min-height: 400px;
+
+        padding: 30px;
+
+    }
+
+
+    .atendimento,
+    .sac,
+    .copyright,
+    .redes {
+
+        position: static;
+
+        transform: none;
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .copyright {
+
+        white-space: normal;
+
+        line-height: 18px;
+
+    }
+
+}
