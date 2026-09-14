@@ -14,7 +14,7 @@
   }
   
   body {
-    background-color: #000;
+    background-color: #1a0000;
     color: #f5ece1;
     font-family: Arial, sans-serif;
   }
@@ -22,6 +22,7 @@
   
   /* =========================================
      PÁGINA PRINCIPAL
+     (mesmo fundo em degradê usado na tela de Login)
   ========================================= */
   
   .pagina {
@@ -29,7 +30,17 @@
     max-width: 100%;
     min-height: 843px;
     margin: 0 auto;
-    background-color: #250707;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #240000;
+    background-image:
+      radial-gradient(
+        ellipse 900px 500px at 50% 0%,
+        rgba(140, 10, 8, 0.25),
+        rgba(36, 0, 0, 0) 70%
+      );
   }
   
   
@@ -46,9 +57,9 @@
   
     padding: 0 30px;
   
-    background-color: #200506;
+    background-color: #210000;
   
-    border-bottom: 1px solid #3e0c0b;
+    border-bottom: 1px solid #3d0000;
   }
   
   
@@ -103,14 +114,14 @@
   header h2 {
     margin: 0 0 20px 0;
   
-    color: #c4231d;
+    color: #df271e;
   
-    font-family: "Orbitron", Arial, sans-serif;
+    font-family: Arial, sans-serif;
   
-    font-size: 24px;
-    font-weight: 800;
+    font-size: 28px;
+    font-weight: bold;
   
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
   
     text-align: center;
     text-transform: uppercase;
@@ -135,7 +146,7 @@
   
     padding: 0;
   
-    background-color: #8b0c0a;
+    background-color: #c00000;
   
     border: 1px solid #9d1714;
     border-radius: 10px;
@@ -156,7 +167,7 @@
   }
   
   .back-btn:hover {
-    background-color: #a20e0b;
+    background-color: #e00000;
   }
   
   
@@ -166,11 +177,38 @@
   
   main {
     width: 100%;
+
+    flex: 1 1 auto;
   
-    padding: 42px 45px 56px 45px;
+    padding: 45px 4.5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   
+  /* =========================================
+     CARTÃO
+     (mesmo painel arredondado, com borda,
+     usado na tela de Login)
+  ========================================= */
+
+  .cartao {
+    width: 100%;
+    max-width: 1000px;
+
+    padding: 42px 50px 50px;
+
+    background-color: #2e0808;
+
+    border: 1px solid #6e1715;
+    border-radius: 16px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  }
+
+
   /* =========================================
      TÍTULO FALE CONOSCO
   ========================================= */
@@ -180,12 +218,12 @@
   
     color: #ffffff;
   
-    font-family: "Orbitron", Arial, sans-serif;
+    font-family: Arial, sans-serif;
   
-    font-size: 43px;
-    font-weight: 400;
+    font-size: 34px;
+    font-weight: bold;
   
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
   
     line-height: 1;
   
@@ -202,10 +240,9 @@
   
     display: grid;
   
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   
-    column-gap: 17px;
-    row-gap: 0;
+    row-gap: 22px;
   
     align-items: start;
   }
@@ -474,55 +511,219 @@
   
     width: 100%;
   
-    margin-top: 114px;
+    margin-top: 30px;
   }
   
   
   /* =========================================
      BOTÃO ENVIAR
+     (mesmo tratamento dourado do botão
+     "Entrar" da tela de Login)
   ========================================= */
   
   button[type="submit"] {
-    width: 587px;
-    height: 106px;
+    width: 340px;
+    max-width: 100%;
+    height: 58px;
   
     padding: 0;
   
-    background-color: #b9862f;
+    background-color: #d4af37;
   
-    background-image:
-      linear-gradient(
-        105deg,
-        #a17428 0%,
-        #b9862f 35%,
-        #b48a45 60%,
-        #b9862f 100%
-      );
+    color: #2a1a00;
   
-    color: #ffffff;
+    border: 1px solid #e3c25c;
+    border-radius: 10px;
   
-    border: 3px solid #c29a52;
-    border-radius: 19px;
+    font-family: Arial, sans-serif;
   
-    font-family: "Orbitron", Arial, sans-serif;
-  
-    font-size: 34px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: bold;
   
     cursor: pointer;
   
     transition: 0.2s ease;
-  
-    box-shadow:
-      inset 0 0 8px rgba(255, 255, 255, 0.12);
   }
   
   button[type="submit"]:hover {
-    filter: brightness(1.08);
+    background-color: #e3c25c;
   }
   
   button[type="submit"]:active {
     transform: scale(0.99);
+  }
+
+
+  /* =========================================
+     FOOTER
+     (idêntico ao rodapé usado nas demais
+     páginas do site: Login, Agendamento...)
+  ========================================= */
+
+  footer {
+    position: relative;
+
+    width: 100%;
+    height: 157px;
+
+    background-color: #170000;
+
+    border-top: 1px solid #310000;
+  }
+
+
+  .atendimento {
+    position: absolute;
+
+    top: 25px;
+    left: 3.6%;
+  }
+
+  .atendimento h3 {
+    color: #df1515;
+
+    font-size: 14px;
+
+    margin-bottom: 7px;
+  }
+
+  .atendimento h3 i {
+    color: #d4af37;
+
+    margin-right: 5px;
+  }
+
+  .atendimento p {
+    color: #ffffff;
+
+    font-size: 11px;
+    line-height: 17px;
+  }
+
+  .atendimento p i {
+    color: #d4af37;
+
+    margin-right: 4px;
+  }
+
+  .atendimento button {
+    width: 130px;
+    height: 29px;
+
+    margin-top: 7px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #c00000;
+
+    color: #ffffff;
+
+    font-size: 9px;
+    font-weight: bold;
+
+    cursor: pointer;
+  }
+
+  .atendimento button:hover {
+    background-color: #e00000;
+  }
+
+
+  .sac {
+    position: absolute;
+
+    top: 27px;
+    left: 46.5%;
+  }
+
+  .sac p {
+    color: #ffffff;
+
+    font-size: 11px;
+  }
+
+  .sac i {
+    color: #d4af37;
+
+    margin-right: 5px;
+  }
+
+
+  .copyright {
+    position: absolute;
+
+    bottom: 20px;
+    left: 43%;
+
+    transform: translateX(-50%);
+
+    color: #888;
+
+    font-size: 10px;
+    white-space: nowrap;
+  }
+
+  .copyright i {
+    color: #d4af37;
+
+    margin-right: 4px;
+  }
+
+
+  .redes {
+    position: absolute;
+
+    right: 3.5%;
+    top: 42px;
+  }
+
+  .redes h3 {
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: normal;
+
+    margin-bottom: 8px;
+  }
+
+  .redes h3 i {
+    color: #d4af37;
+
+    margin-right: 4px;
+  }
+
+  .icones {
+    display: flex;
+
+    gap: 8px;
+  }
+
+  .icones a {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+
+    background-color: #c00000;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    transition: 0.2s ease;
+  }
+
+  .icones a:hover {
+    background-color: #e00000;
+
+    transform: translateY(-2px);
   }
   
   
@@ -568,6 +769,10 @@
     main {
       padding: 35px 25px;
     }
+
+    .cartao {
+      padding: 30px 25px 35px;
+    }
   
     form {
       grid-template-columns: 1fr;
@@ -575,12 +780,31 @@
     }
   
     .btn-wrap {
-      margin-top: 50px;
+      margin-top: 35px;
     }
   
     button[type="submit"] {
       width: 80%;
-      height: 85px;
+      height: 56px;
+      font-size: 17px;
+    }
+
+    footer {
+      height: auto;
+      min-height: 260px;
+
+      padding: 20px;
+    }
+
+    .atendimento,
+    .sac,
+    .copyright,
+    .redes {
+      position: static;
+
+      transform: none;
+
+      margin-bottom: 20px;
     }
   }
   
@@ -613,6 +837,12 @@
     h1 {
       font-size: 30px;
     }
+
+    .cartao {
+      padding: 25px 18px 30px;
+
+      border-radius: 12px;
+    }
   
     .campo {
       height: 65px;
@@ -639,9 +869,8 @@
   
     button[type="submit"] {
       width: 100%;
-      height: 75px;
+      height: 54px;
   
-      font-size: 26px;
+      font-size: 17px;
     }
   }
-  

@@ -290,7 +290,7 @@ main {
 
 .veiculo {
 
-    height: 205px;
+    height: auto;
 
     background:
         #500000;
@@ -926,7 +926,7 @@ footer {
 
     .veiculo {
 
-        height: 220px;
+        height: auto;
 
     }
 
